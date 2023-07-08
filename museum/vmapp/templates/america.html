@@ -1,0 +1,510 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<style>
+    /* Navigation bar styles */
+    .navbar {
+      background-color: #1E90FF;
+      display: flex;
+      justify-content: flex-end; /* Align the text to the left */
+      margin-top: 20px;
+      height: 60px;
+    }
+
+    .navbar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end; /* Align the text to the left */
+    }
+
+    .navbar li {
+      margin: 0 10px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-family: "Britannic Bold", sans-serif;
+      font-size: 20px;
+      text-transform: uppercase;
+      line-height: 60px;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #1E90FF;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .navbar li:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      font-family: "Britannic Bold", sans-serif;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+    @import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+            $main-green: #79dd09 !default;
+            $main-green-rgb-015: rgba(121, 221, 9, 0.1) !default;
+            $main-yellow: #bdbb49 !default;
+            $main-yellow-rgb-015: rgba(189, 187, 73, 0.1) !default;
+            $main-red: #bd150b !default;
+            $main-red-rgb-015: rgba(189, 21, 11, 0.1) !default;
+            $main-blue: #0076bd !default;
+            $main-blue-rgb-015: rgba(0, 118, 189, 0.1) !default;
+
+/* This pen */
+body {
+	font-family: "Baloo 2", cursive;
+	font-size: 16px;
+	color: #ffffff;
+	text-rendering: optimizeLegibility;
+	font-weight: initial;
+}
+
+.dark {
+	background: #110f16;
+}
+
+
+.light {
+	background: #f3f5f7;
+}
+
+a, a:hover {
+	text-decoration: none;
+	transition: color 0.3s ease-in-out;
+}
+
+#pageHeaderTitle {
+	margin: 2rem 0;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 2.5rem;
+}
+
+/* Cards */
+.postcard {
+  flex-wrap: wrap;
+  display: flex;
+  
+  box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
+  border-radius: 10px;
+  margin: 0 0 2rem 0;
+  overflow: hidden;
+  position: relative;
+  color: #ffffff;
+
+	&.dark {
+		background-color: #18151f;
+	}
+	&.light {
+		background-color: #e1e5ea;
+	}
+	
+	.t-dark {
+		color: #18151f;
+	}
+	
+  a {
+    color: inherit;
+  }
+	
+	h1,	.h1 {
+		margin-bottom: 0.5rem;
+		font-weight: 500;
+		line-height: 1.2;
+	}
+	
+	.small {
+		font-size: 80%;
+	}
+
+  .postcard__title {
+    font-size: 1.75rem;
+  }
+
+  .postcard__img {
+    max-height: 180px;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+  }
+
+  .postcard__img_link {
+    display: contents;
+  }
+
+  .postcard__bar {
+    width: 50px;
+    height: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #424242;
+    transition: width 0.2s ease;
+  }
+
+  .postcard__text {
+    padding: 1.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .postcard__preview-txt {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: justify;
+    height: 100%;
+  }
+
+  .postcard__tagbox {
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 14px;
+    margin: 20px 0 0 0;
+		padding: 0;
+    justify-content: center;
+
+    .tag__item {
+      display: inline-block;
+      background: rgba(83, 83, 83, 0.4);
+      border-radius: 3px;
+      padding: 2.5px 10px;
+      margin: 0 5px 5px 0;
+      cursor: default;
+      user-select: none;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background: rgba(83, 83, 83, 0.8);
+      }
+    }
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(-70deg, #424242, transparent 50%);
+    opacity: 1;
+    border-radius: 10px;
+  }
+
+  &:hover .postcard__bar {
+    width: 100px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .postcard {
+    flex-wrap: inherit;
+
+    .postcard__title {
+      font-size: 2rem;
+    }
+
+    .postcard__tagbox {
+      justify-content: start;
+    }
+
+    .postcard__img {
+      max-width: 300px;
+      max-height: 100%;
+      transition: transform 0.3s ease;
+    }
+
+    .postcard__text {
+      padding: 3rem;
+      width: 100%;
+    }
+
+    .media.postcard__text:before {
+      content: "";
+      position: absolute;
+      display: block;
+      background: #18151f;
+      top: -20%;
+      height: 130%;
+      width: 55px;
+    }
+
+    &:hover .postcard__img {
+      transform: scale(1.1);
+    }
+
+    &:nth-child(2n+1) {
+      flex-direction: row;
+    }
+
+    &:nth-child(2n+0) {
+      flex-direction: row-reverse;
+    }
+
+    &:nth-child(2n+1) .postcard__text::before {
+      left: -12px !important;
+      transform: rotate(4deg);
+    }
+
+    &:nth-child(2n+0) .postcard__text::before {
+      right: -12px !important;
+      transform: rotate(-4deg);
+    }
+  }
+}
+@media screen and (min-width: 1024px){
+		.postcard__text {
+      padding: 2rem 3.5rem;
+    }
+		
+		.postcard__text:before {
+      content: "";
+      position: absolute;
+      display: block;
+      
+      top: -20%;
+      height: 130%;
+      width: 55px;
+    }
+	
+  .postcard.dark {
+		.postcard__text:before {
+			background: #18151f;
+		}
+  }
+	.postcard.light {
+		.postcard__text:before {
+			background: #e1e5ea;
+		}
+  }
+}
+
+/* COLORS */
+.postcard .postcard__tagbox .green.play:hover {
+	background: $main-green;
+	color: black;
+}
+.green .postcard__title:hover {
+	color: $main-green;
+}
+.green .postcard__bar {
+	background-color: $main-green;
+}
+.green::before {
+	background-image: linear-gradient(
+		-30deg,
+		$main-green-rgb-015,
+		transparent 50%
+	);
+}
+.green:nth-child(2n)::before {
+	background-image: linear-gradient(30deg, $main-green-rgb-015, transparent 50%);
+}
+
+.postcard .postcard__tagbox .blue.play:hover {
+	background: $main-blue;
+}
+.blue .postcard__title:hover {
+	color: $main-blue;
+}
+.blue .postcard__bar {
+	background-color: $main-blue;
+}
+.blue::before {
+	background-image: linear-gradient(-30deg, $main-blue-rgb-015, transparent 50%);
+}
+.blue:nth-child(2n)::before {
+	background-image: linear-gradient(30deg, $main-blue-rgb-015, transparent 50%);
+}
+
+.postcard .postcard__tagbox .red.play:hover {
+	background: $main-red;
+}
+.red .postcard__title:hover {
+	color: $main-red;
+}
+.red .postcard__bar {
+	background-color: $main-red;
+}
+.red::before {
+	background-image: linear-gradient(-30deg, $main-red-rgb-015, transparent 50%);
+}
+.red:nth-child(2n)::before {
+	background-image: linear-gradient(30deg, $main-red-rgb-015, transparent 50%);
+}
+
+.postcard .postcard__tagbox .yellow.play:hover {
+	background: $main-yellow;
+	color: black;
+}
+.yellow .postcard__title:hover {
+	color: $main-yellow;
+}
+.yellow .postcard__bar {
+	background-color: $main-yellow;
+}
+.yellow::before {
+	background-image: linear-gradient(
+		-30deg,
+		$main-yellow-rgb-015,
+		transparent 50%
+	);
+}
+.yellow:nth-child(2n)::before {
+	background-image: linear-gradient(
+		30deg,
+		$main-yellow-rgb-015,
+		transparent 50%
+	);
+}
+
+@media screen and (min-width: 769px) {
+	.green::before {
+		background-image: linear-gradient(
+			-80deg,
+			$main-green-rgb-015,
+			transparent 50%
+		);
+	}
+	.green:nth-child(2n)::before {
+		background-image: linear-gradient(
+			80deg,
+			$main-green-rgb-015,
+			transparent 50%
+		);
+	}
+
+	.blue::before {
+		background-image: linear-gradient(
+			-80deg,
+			$main-blue-rgb-015,
+			transparent 50%
+		);
+	}
+	.blue:nth-child(2n)::before {
+		background-image: linear-gradient(80deg, $main-blue-rgb-015, transparent 50%);
+	}
+
+	.red::before {
+		background-image: linear-gradient(-80deg, $main-red-rgb-015, transparent 50%);
+	}
+	.red:nth-child(2n)::before {
+		background-image: linear-gradient(80deg, $main-red-rgb-015, transparent 50%);
+	}
+	
+	.yellow::before {
+		background-image: linear-gradient(
+			-80deg,
+			$main-yellow-rgb-015,
+			transparent 50%
+		);
+	}
+	.yellow:nth-child(2n)::before {
+		background-image: linear-gradient(
+			80deg,
+			$main-yellow-rgb-015,
+			transparent 50%
+		);
+	}
+}
+footer {
+      background-color: #ADD8E6;
+      padding: 20px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+</style>
+<div class="navbar">
+    <ul>
+      <li><a href="{% url 'home' %}">Home</a></li>
+      <li><a href="{% url 'explore' %}">Explore</a></li>
+      <li class="dropdown">
+        <a href="#">Account</a>
+        <div class="dropdown-content">
+          <a href="{% url 'signin' %}">sign in</a>
+          <a href="#">Profile</a>
+          <a href="#">Log in</a>
+          <a href="#">Logout</a>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+  <section class="light">
+	<div class="container py-2">
+		<div class="h1 text-center text-dark" id="pageHeaderTitle">American Museum of Natural History</div>
+
+		<article class="postcard light blue">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src="static\images\crystal.webp" alt="Image Title" />
+			</a>
+			<div class="postcard__text t-dark">
+				<h1 class="postcard__title blue"><a href="#">Amethyst Crystals</a></h1>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">I’ll be the first to say it – I don’t understand the world’s current fascination with crystals. That is I didn’t – until I saw the amethyst geode housed in the Mignone Hall of Gems and Minerals. I’m used to small crystals we made in elementary school from borax and water, but this one is over 9 feet tall!
+                    Not to get too technical, but it’s technically a geode. The geode is a 12,000 pound hollow rock, in which quartz crystals are housed. Even though the crystals formed quickly, probably in about a year, it took them millions of years to turn into the purple color amethyst.</div>
+                    </div>
+		</article>
+		<article class="postcard light red">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src="static\images\elephant.webp" alt="Image Title" />	
+			</a>
+			<div class="postcard__text t-dark">
+				<h1 class="postcard__title red"><a href="#">African Elephants</a></h1>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">In the middle of the Akeley Hall of African mammals visitors get to take in the massive size of a family of 8 elephants. One of the elephants was killed during an expedition to Africa in 1909 by Theodore Roosevelt shortly after his presidency.
+                    It’s hard to describe the sheer size of an elephant. In zoos we only see them from a distance, but here guests get to practically stand alongside them. Not only are they the largest living land mammal, they are also one of the best things to see at the American Museum of Natural History.</div> 
+			</div>
+		</article>
+		<article class="postcard light green">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src="static\images\meteroid.webp" alt="Image Title" />
+			</a>
+			<div class="postcard__text t-dark">
+				<h1 class="postcard__title green"><a href="#"> Willamette Meteorite</a></h1>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">Being the largest meteorite found in the United States and the sixth largest in the world warrants the Willamette Meteorite a spot among the best things to see at the American Museum of Natural History.
+
+                    The whopping 15.5 ton space rock has had 3 major changes in scenery in the last few thousand years. It traveled at nearly 40,000 MPH to earth where it landed on a glacier in either Canada or Montana (I’m not sure, I wasn’t there). From its impact site the Missoula floods brought it to Oregon during the end of the last ice age. </div>
+            </div>
+		</article>
+		<article class="postcard light yellow">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src="static\images\mammoth.webp" alt="Image Title" />
+			</a>
+			<div class="postcard__text t-dark">
+				<h1 class="postcard__title yellow"><a href="#">Mammoth</a></h1>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt"> The fascination this pre-historic mammal provides its audience with is why I consider it one of the best things to see at the American Museum of Natural History.
+                    In the Hall of Advanced Mammals guests get to take in the epic grandeur of a full skeleton found in Indiana. The skeleton is of Mammuthus, not to be confused with the its smaller cousin Mammuthus Primigenius. AKA the woolly mammoth (whose hairstyle was all the rage in the Pleistocene era).</div>              
+            </div>
+		</article>
+        <article class="postcard light blue">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src="static\images\trex.webp" alt="Image Title" />
+			</a>
+			<div class="postcard__text t-dark">
+				<h1 class="postcard__title blue"><a href="#"> T-Rex</a></h1>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">Barnum Brown is arguably the most prolific paleontologists of all time. Nicknamed “Mr. Bones” he joined the museum in 1897 and began his storied career. He discovered the first Tyrannosaurus rex in 1902.
+                    Six years later in 1908 he discovered a nearly complete specimen in Big Dry Creek, Montana. It was shipped back to New York City and is the one currently on display, inspiring visitors for over a century.</div>
+                </div>
+		</article>
+		</section>
+    <section style="background-color: grey;">
+      <footer>
+        <p>&copy; 2023 A-MUSEUM WORLD. All rights reserved.</p>
+      </footer>
+      </section>

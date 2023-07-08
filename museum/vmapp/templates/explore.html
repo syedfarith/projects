@@ -1,0 +1,513 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<style>
+    /* Navigation bar styles */
+    .navbar {
+      background-color: #1E90FF;
+      display: flex;
+      justify-content: flex-end; /* Align the text to the left */
+      margin-top: 20px;
+      height: 60px;
+    }
+
+    .navbar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end; /* Align the text to the left */
+    }
+
+    .navbar li {
+      margin: 0 10px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-family: "Britannic Bold", sans-serif;
+      font-size: 20px;
+      text-transform: uppercase;
+      line-height: 60px;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #1E90FF;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .navbar li:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      font-family: "Britannic Bold", sans-serif;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+    @import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+            $main-green: #79dd09 !default;
+            $main-green-rgb-015: rgba(121, 221, 9, 0.1) !default;
+            $main-yellow: #bdbb49 !default;
+            $main-yellow-rgb-015: rgba(189, 187, 73, 0.1) !default;
+            $main-red: #bd150b !default;
+            $main-red-rgb-015: rgba(189, 21, 11, 0.1) !default;
+            $main-blue: #0076bd !default;
+            $main-blue-rgb-015: rgba(0, 118, 189, 0.1) !default;
+
+/* This pen */
+body {
+	font-family: "Baloo 2", cursive;
+	font-size: 16px;
+	color: #ffffff;
+	text-rendering: optimizeLegibility;
+	font-weight: initial;
+}
+
+.dark {
+	background: #110f16;
+}
+
+
+.light {
+	background: #f3f5f7;
+}
+
+a, a:hover {
+	text-decoration: none;
+	transition: color 0.3s ease-in-out;
+}
+
+#pageHeaderTitle {
+	margin: 2rem 0;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 2.5rem;
+}
+
+/* Cards */
+.postcard {
+  flex-wrap: wrap;
+  display: flex;
+  
+  box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
+  border-radius: 10px;
+  margin: 0 0 2rem 0;
+  overflow: hidden;
+  position: relative;
+  color: #ffffff;
+
+	&.dark {
+		background-color: #18151f;
+	}
+	&.light {
+		background-color: #e1e5ea;
+	}
+	
+	.t-dark {
+		color: #18151f;
+	}
+	
+  a {
+    color: inherit;
+  }
+	
+	h1,	.h1 {
+		margin-bottom: 0.5rem;
+		font-weight: 500;
+		line-height: 1.2;
+	}
+	
+	.small {
+		font-size: 80%;
+	}
+
+  .postcard__title {
+    font-size: 1.75rem;
+  }
+
+  .postcard__img {
+    max-height: 180px;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+  }
+
+  .postcard__img_link {
+    display: contents;
+  }
+
+  .postcard__bar {
+    width: 50px;
+    height: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #424242;
+    transition: width 0.2s ease;
+  }
+
+  .postcard__text {
+    padding: 1.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .postcard__preview-txt {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: justify;
+    height: 100%;
+  }
+
+  .postcard__tagbox {
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 14px;
+    margin: 20px 0 0 0;
+		padding: 0;
+    justify-content: center;
+
+    .tag__item {
+      display: inline-block;
+      background: rgba(83, 83, 83, 0.4);
+      border-radius: 3px;
+      padding: 2.5px 10px;
+      margin: 0 5px 5px 0;
+      cursor: default;
+      user-select: none;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background: rgba(83, 83, 83, 0.8);
+      }
+    }
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(-70deg, #424242, transparent 50%);
+    opacity: 1;
+    border-radius: 10px;
+  }
+
+  &:hover .postcard__bar {
+    width: 100px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .postcard {
+    flex-wrap: inherit;
+
+    .postcard__title {
+      font-size: 2rem;
+    }
+
+    .postcard__tagbox {
+      justify-content: start;
+    }
+
+    .postcard__img {
+      max-width: 300px;
+      max-height: 100%;
+      transition: transform 0.3s ease;
+    }
+
+    .postcard__text {
+      padding: 3rem;
+      width: 100%;
+    }
+
+    .media.postcard__text:before {
+      content: "";
+      position: absolute;
+      display: block;
+      background: #18151f;
+      top: -20%;
+      height: 130%;
+      width: 55px;
+    }
+
+    &:hover .postcard__img {
+      transform: scale(1.1);
+    }
+
+    &:nth-child(2n+1) {
+      flex-direction: row;
+    }
+
+    &:nth-child(2n+0) {
+      flex-direction: row-reverse;
+    }
+
+    &:nth-child(2n+1) .postcard__text::before {
+      left: -12px !important;
+      transform: rotate(4deg);
+    }
+
+    &:nth-child(2n+0) .postcard__text::before {
+      right: -12px !important;
+      transform: rotate(-4deg);
+    }
+  }
+}
+@media screen and (min-width: 1024px){
+		.postcard__text {
+      padding: 2rem 3.5rem;
+    }
+		
+		.postcard__text:before {
+      content: "";
+      position: absolute;
+      display: block;
+      
+      top: -20%;
+      height: 130%;
+      width: 55px;
+    }
+	
+  .postcard.dark {
+		.postcard__text:before {
+			background: #18151f;
+		}
+  }
+	.postcard.light {
+		.postcard__text:before {
+			background: #e1e5ea;
+		}
+  }
+}
+
+/* COLORS */
+.postcard .postcard__tagbox .green.play:hover {
+	background: $main-green;
+	color: black;
+}
+.green .postcard__title:hover {
+	color: $main-green;
+}
+.green .postcard__bar {
+	background-color: $main-green;
+}
+.green::before {
+	background-image: linear-gradient(
+		-30deg,
+		$main-green-rgb-015,
+		transparent 50%
+	);
+}
+.green:nth-child(2n)::before {
+	background-image: linear-gradient(30deg, $main-green-rgb-015, transparent 50%);
+}
+
+.postcard .postcard__tagbox .blue.play:hover {
+	background: $main-blue;
+}
+.blue .postcard__title:hover {
+	color: $main-blue;
+}
+.blue .postcard__bar {
+	background-color: $main-blue;
+}
+.blue::before {
+	background-image: linear-gradient(-30deg, $main-blue-rgb-015, transparent 50%);
+}
+.blue:nth-child(2n)::before {
+	background-image: linear-gradient(30deg, $main-blue-rgb-015, transparent 50%);
+}
+
+.postcard .postcard__tagbox .red.play:hover {
+	background: $main-red;
+}
+.red .postcard__title:hover {
+	color: $main-red;
+}
+.red .postcard__bar {
+	background-color: $main-red;
+}
+.red::before {
+	background-image: linear-gradient(-30deg, $main-red-rgb-015, transparent 50%);
+}
+.red:nth-child(2n)::before {
+	background-image: linear-gradient(30deg, $main-red-rgb-015, transparent 50%);
+}
+
+.postcard .postcard__tagbox .yellow.play:hover {
+	background: $main-yellow;
+	color: black;
+}
+.yellow .postcard__title:hover {
+	color: $main-yellow;
+}
+.yellow .postcard__bar {
+	background-color: $main-yellow;
+}
+.yellow::before {
+	background-image: linear-gradient(
+		-30deg,
+		$main-yellow-rgb-015,
+		transparent 50%
+	);
+}
+.yellow:nth-child(2n)::before {
+	background-image: linear-gradient(
+		30deg,
+		$main-yellow-rgb-015,
+		transparent 50%
+	);
+}
+
+@media screen and (min-width: 769px) {
+	.green::before {
+		background-image: linear-gradient(
+			-80deg,
+			$main-green-rgb-015,
+			transparent 50%
+		);
+	}
+	.green:nth-child(2n)::before {
+		background-image: linear-gradient(
+			80deg,
+			$main-green-rgb-015,
+			transparent 50%
+		);
+	}
+
+	.blue::before {
+		background-image: linear-gradient(
+			-80deg,
+			$main-blue-rgb-015,
+			transparent 50%
+		);
+	}
+	.blue:nth-child(2n)::before {
+		background-image: linear-gradient(80deg, $main-blue-rgb-015, transparent 50%);
+	}
+
+	.red::before {
+		background-image: linear-gradient(-80deg, $main-red-rgb-015, transparent 50%);
+	}
+	.red:nth-child(2n)::before {
+		background-image: linear-gradient(80deg, $main-red-rgb-015, transparent 50%);
+	}
+	
+	.yellow::before {
+		background-image: linear-gradient(
+			-80deg,
+			$main-yellow-rgb-015,
+			transparent 50%
+		);
+	}
+	.yellow:nth-child(2n)::before {
+		background-image: linear-gradient(
+			80deg,
+			$main-yellow-rgb-015,
+			transparent 50%
+		);
+	}
+}
+footer {
+      background-color: #ADD8E6;
+      padding: 20px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+</style>
+<div class="navbar">
+    <ul>
+      <li><a href="{% url 'home' %}">Home</a></li>
+      <li><a href="{% url 'explore' %}">Explore</a></li>
+      <li class="dropdown">
+        <a href="#">Account</a>
+        <div class="dropdown-content">
+          <a href="{% url 'signin' %}">sign in</a>
+          <a href="#">Profile</a>
+          <a href="#">Log in</a>
+          <a href="#">Logout</a>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+  <section class="light">
+	<div class="container py-2">
+		<div class="h1 text-center text-dark" id="pageHeaderTitle">Top Museums in the world</div>
+
+		<article class="postcard light blue">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src="static\images\metropolitan.jpeg" alt="Image Title" />
+			</a>
+			<div class="postcard__text t-dark">
+				<h1 class="postcard__title blue"><a href="#">Metropolitan Museum Of Art</a></h1>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">The Metropolitan Museum of Art presents over 5,000 years of art from around the world for everyone to experience and enjoy. The Museum lives in two iconic sites in New York City—The Met Fifth Avenue and The Met Cloisters. Millions of people also take part in The Met experience online.
+                    Since its founding in 1870, The Met has always aspired to be more than a treasury of rare and beautiful objects. Every day, art comes alive in the Museum's galleries and through its exhibitions and events, revealing new ideas and unexpected connections across time and across cultures.</div>
+                    <button type="button" class="btn btn-primary"><a href="{% url 'metro' %} "style="color: white;">Visit</a></button>
+                </div>
+		</article>
+		<article class="postcard light red">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src="static\images\british museum.jpeg" alt="Image Title" />	
+			</a>
+			<div class="postcard__text t-dark">
+				<h1 class="postcard__title red"><a href="#">British Museum</a></h1>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">The British Museum, located in London, is one of the world's largest and most renowned museums. Founded in 1753, it houses a vast collection of art and artifacts spanning over two million years of human history.
+                    The museum's collection is incredibly diverse, encompassing objects from every continent. It showcases artifacts from ancient civilizations such as Egypt, Greece, and Rome, including the famous Rosetta Stone and the Elgin Marbles. The museum also houses an extensive collection of cultural treasures from Asia, Africa, the Americas, and the Pacific.</div>
+                    <button type="button" class="btn btn-primary"><a href="{% url 'british' %}"style="color: white;">Visit</a></button>
+			</div>
+		</article>
+		<article class="postcard light green">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src="static\images\louvre.jpeg" alt="Image Title" />
+			</a>
+			<div class="postcard__text t-dark">
+				<h1 class="postcard__title green"><a href="#">Louvre Museum</a></h1>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">The Louvre Museum is not only known for its extensive collection but also for its architectural grandeur. The museum is situated in the Louvre Palace, a historic landmark that was once the residence of French kings. The palace itself is a magnificent example of classical architecture, with its iconic glass pyramid entrance serving as a striking modern addition.</div>
+                <button type="button" class="btn btn-primary"><a href="{% url 'louvre' %}"style="color: white;">Visit</a></button>
+            </div>
+      </article>
+		<article class="postcard light red">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src="static\images\american.jpeg" alt="Image Title" />	
+			</a>
+			<div class="postcard__text t-dark">
+				<h1 class="postcard__title red"><a href="#">American Museum of Natural History</a></h1>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">The American Museum of Natural History is a world-renowned institution located in New York City. Founded in 1869, it is one of the largest and most influential natural history museums in the world. The museum's mission is to discover, interpret, and disseminate knowledge about human cultures, the natural world, and the universe.
+                    The museum boasts an extensive collection of over 34 million specimens and artifacts, spanning a wide range of disciplines including anthropology, paleontology, geology, and astronomy. Visitors can explore numerous exhibition halls that showcase the wonders of the natural world, from dinosaur fossils to intricate dioramas depicting wildlife habitats.</div>
+                    <button type="button" class="btn btn-primary"><a href="{% url 'america' %}"style="color: white;">Visit</a></button>
+                </div>
+		</article>
+		<article class="postcard light green">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src="static\images\uffizi.jpeg" alt="Image Title" />
+			</a>
+			<div class="postcard__text t-dark">
+				<h1 class="postcard__title green"><a href="#">Uffizi Gallery</a></h1>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">The Uffizi Gallery, located in the heart of Florence, Italy, is a treasure trove of artistic masterpieces spanning centuries of human creativity. Stepping into the gallery is like stepping into a time capsule that transports visitors to the Renaissance and beyond. With its grand halls, ornate ceilings, and awe-inspiring artwork, the Uffizi Gallery offers a truly immersive experience for art lovers</div>
+                <button type="button" class="btn btn-primary"><a href="{% url 'uffizi' %}"style="color: white;">Visit</a></button>
+            </div>
+		</article>
+	</div>
+</section>
+<section style="background-color: grey;">
+  <footer>
+    <p>&copy; 2023 A-MUSEUM WORLD. All rights reserved.</p>
+  </footer>
+  </section>

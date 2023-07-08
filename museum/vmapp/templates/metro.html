@@ -1,0 +1,510 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<style>
+    /* Navigation bar styles */
+    .navbar {
+      background-color: #1E90FF;
+      display: flex;
+      justify-content: flex-end; /* Align the text to the left */
+      margin-top: 20px;
+      height: 60px;
+    }
+
+    .navbar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end; /* Align the text to the left */
+    }
+
+    .navbar li {
+      margin: 0 10px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-family: "Britannic Bold", sans-serif;
+      font-size: 20px;
+      text-transform: uppercase;
+      line-height: 60px;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #1E90FF;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .navbar li:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      font-family: "Britannic Bold", sans-serif;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+    @import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+            $main-green: #79dd09 !default;
+            $main-green-rgb-015: rgba(121, 221, 9, 0.1) !default;
+            $main-yellow: #bdbb49 !default;
+            $main-yellow-rgb-015: rgba(189, 187, 73, 0.1) !default;
+            $main-red: #bd150b !default;
+            $main-red-rgb-015: rgba(189, 21, 11, 0.1) !default;
+            $main-blue: #0076bd !default;
+            $main-blue-rgb-015: rgba(0, 118, 189, 0.1) !default;
+
+/* This pen */
+body {
+	font-family: "Baloo 2", cursive;
+	font-size: 16px;
+	color: #ffffff;
+	text-rendering: optimizeLegibility;
+	font-weight: initial;
+}
+
+.dark {
+	background: #110f16;
+}
+
+
+.light {
+	background: #f3f5f7;
+}
+
+a, a:hover {
+	text-decoration: none;
+	transition: color 0.3s ease-in-out;
+}
+
+#pageHeaderTitle {
+	margin: 2rem 0;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 2.5rem;
+}
+
+/* Cards */
+.postcard {
+  flex-wrap: wrap;
+  display: flex;
+  
+  box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
+  border-radius: 10px;
+  margin: 0 0 2rem 0;
+  overflow: hidden;
+  position: relative;
+  color: #ffffff;
+
+	&.dark {
+		background-color: #18151f;
+	}
+	&.light {
+		background-color: #e1e5ea;
+	}
+	
+	.t-dark {
+		color: #18151f;
+	}
+	
+  a {
+    color: inherit;
+  }
+	
+	h1,	.h1 {
+		margin-bottom: 0.5rem;
+		font-weight: 500;
+		line-height: 1.2;
+	}
+	
+	.small {
+		font-size: 80%;
+	}
+
+  .postcard__title {
+    font-size: 1.75rem;
+  }
+
+  .postcard__img {
+    max-height: 180px;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+  }
+
+  .postcard__img_link {
+    display: contents;
+  }
+
+  .postcard__bar {
+    width: 50px;
+    height: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #424242;
+    transition: width 0.2s ease;
+  }
+
+  .postcard__text {
+    padding: 1.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .postcard__preview-txt {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: justify;
+    height: 100%;
+  }
+
+  .postcard__tagbox {
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 14px;
+    margin: 20px 0 0 0;
+		padding: 0;
+    justify-content: center;
+
+    .tag__item {
+      display: inline-block;
+      background: rgba(83, 83, 83, 0.4);
+      border-radius: 3px;
+      padding: 2.5px 10px;
+      margin: 0 5px 5px 0;
+      cursor: default;
+      user-select: none;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background: rgba(83, 83, 83, 0.8);
+      }
+    }
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(-70deg, #424242, transparent 50%);
+    opacity: 1;
+    border-radius: 10px;
+  }
+
+  &:hover .postcard__bar {
+    width: 100px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .postcard {
+    flex-wrap: inherit;
+
+    .postcard__title {
+      font-size: 2rem;
+    }
+
+    .postcard__tagbox {
+      justify-content: start;
+    }
+
+    .postcard__img {
+      max-width: 300px;
+      max-height: 100%;
+      transition: transform 0.3s ease;
+    }
+
+    .postcard__text {
+      padding: 3rem;
+      width: 100%;
+    }
+
+    .media.postcard__text:before {
+      content: "";
+      position: absolute;
+      display: block;
+      background: #18151f;
+      top: -20%;
+      height: 130%;
+      width: 55px;
+    }
+
+    &:hover .postcard__img {
+      transform: scale(1.1);
+    }
+
+    &:nth-child(2n+1) {
+      flex-direction: row;
+    }
+
+    &:nth-child(2n+0) {
+      flex-direction: row-reverse;
+    }
+
+    &:nth-child(2n+1) .postcard__text::before {
+      left: -12px !important;
+      transform: rotate(4deg);
+    }
+
+    &:nth-child(2n+0) .postcard__text::before {
+      right: -12px !important;
+      transform: rotate(-4deg);
+    }
+  }
+}
+@media screen and (min-width: 1024px){
+		.postcard__text {
+      padding: 2rem 3.5rem;
+    }
+		
+		.postcard__text:before {
+      content: "";
+      position: absolute;
+      display: block;
+      
+      top: -20%;
+      height: 130%;
+      width: 55px;
+    }
+	
+  .postcard.dark {
+		.postcard__text:before {
+			background: #18151f;
+		}
+  }
+	.postcard.light {
+		.postcard__text:before {
+			background: #e1e5ea;
+		}
+  }
+}
+
+/* COLORS */
+.postcard .postcard__tagbox .green.play:hover {
+	background: $main-green;
+	color: black;
+}
+.green .postcard__title:hover {
+	color: $main-green;
+}
+.green .postcard__bar {
+	background-color: $main-green;
+}
+.green::before {
+	background-image: linear-gradient(
+		-30deg,
+		$main-green-rgb-015,
+		transparent 50%
+	);
+}
+.green:nth-child(2n)::before {
+	background-image: linear-gradient(30deg, $main-green-rgb-015, transparent 50%);
+}
+
+.postcard .postcard__tagbox .blue.play:hover {
+	background: $main-blue;
+}
+.blue .postcard__title:hover {
+	color: $main-blue;
+}
+.blue .postcard__bar {
+	background-color: $main-blue;
+}
+.blue::before {
+	background-image: linear-gradient(-30deg, $main-blue-rgb-015, transparent 50%);
+}
+.blue:nth-child(2n)::before {
+	background-image: linear-gradient(30deg, $main-blue-rgb-015, transparent 50%);
+}
+
+.postcard .postcard__tagbox .red.play:hover {
+	background: $main-red;
+}
+.red .postcard__title:hover {
+	color: $main-red;
+}
+.red .postcard__bar {
+	background-color: $main-red;
+}
+.red::before {
+	background-image: linear-gradient(-30deg, $main-red-rgb-015, transparent 50%);
+}
+.red:nth-child(2n)::before {
+	background-image: linear-gradient(30deg, $main-red-rgb-015, transparent 50%);
+}
+
+.postcard .postcard__tagbox .yellow.play:hover {
+	background: $main-yellow;
+	color: black;
+}
+.yellow .postcard__title:hover {
+	color: $main-yellow;
+}
+.yellow .postcard__bar {
+	background-color: $main-yellow;
+}
+.yellow::before {
+	background-image: linear-gradient(
+		-30deg,
+		$main-yellow-rgb-015,
+		transparent 50%
+	);
+}
+.yellow:nth-child(2n)::before {
+	background-image: linear-gradient(
+		30deg,
+		$main-yellow-rgb-015,
+		transparent 50%
+	);
+}
+
+@media screen and (min-width: 769px) {
+	.green::before {
+		background-image: linear-gradient(
+			-80deg,
+			$main-green-rgb-015,
+			transparent 50%
+		);
+	}
+	.green:nth-child(2n)::before {
+		background-image: linear-gradient(
+			80deg,
+			$main-green-rgb-015,
+			transparent 50%
+		);
+	}
+
+	.blue::before {
+		background-image: linear-gradient(
+			-80deg,
+			$main-blue-rgb-015,
+			transparent 50%
+		);
+	}
+	.blue:nth-child(2n)::before {
+		background-image: linear-gradient(80deg, $main-blue-rgb-015, transparent 50%);
+	}
+
+	.red::before {
+		background-image: linear-gradient(-80deg, $main-red-rgb-015, transparent 50%);
+	}
+	.red:nth-child(2n)::before {
+		background-image: linear-gradient(80deg, $main-red-rgb-015, transparent 50%);
+	}
+	
+	.yellow::before {
+		background-image: linear-gradient(
+			-80deg,
+			$main-yellow-rgb-015,
+			transparent 50%
+		);
+	}
+	.yellow:nth-child(2n)::before {
+		background-image: linear-gradient(
+			80deg,
+			$main-yellow-rgb-015,
+			transparent 50%
+		);
+	}
+}
+footer {
+      background-color: #ADD8E6;
+      padding: 20px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+</style>
+<div class="navbar">
+    <ul>
+      <li><a href="{% url 'home' %}">Home</a></li>
+      <li><a href="{% url 'explore' %}">Explore</a></li>
+      <li class="dropdown">
+        <a href="#">Account</a>
+        <div class="dropdown-content">
+          <a href="{% url 'signin' %}">sign in</a>
+          <a href="#">Profile</a>
+          <a href="#">Log in</a>
+          <a href="#">Logout</a>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+  <section class="light">
+	<div class="container py-2">
+		<div class="h1 text-center text-dark" id="pageHeaderTitle">Metropolitan Museum Of Art</div>
+
+		<article class="postcard light blue">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src="static\images\aristo.webp" alt="Image Title" />
+			</a>
+			<div class="postcard__text t-dark">
+				<h1 class="postcard__title blue"><a href="#">Aristotle with a Bust of Homer</a></h1>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">Sticking to the theme of Rembrandt masterpieces, Aristotle with a Bust of Homer is also a must see at The Met. Thankfully it’s located a few steps from Rembrandt Self Portrait, making it a natural next stop.
+                    This iconic painting is considered one of the most celebrated and famous paintings at the Metropolitan Museum of Art, reason alone to visit.                  
+                    The portrait depicts a pensive Aristotle resting his hand on a bust of Homer, the legendary poet that achieved literary immortality through his writing of Iliad and Odyssey.</div>
+                </div>
+		</article>
+		<article class="postcard light red">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src="static\images\egypt.webp" alt="Image Title" />	
+			</a>
+			<div class="postcard__text t-dark">
+				<h1 class="postcard__title red"><a href="#">The Sphinx of Hatshepsut</a></h1>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">The ancient Egyptian Pharaoh Hatshepsut lived and reigned in the 15th century BC. At her burial location at Deir el-Bahri, six sphinxes stood guard. Her successor, Thutmose III, ordered that they be destroyed. Ultimately, fragments of the Sphinx of Hatshepsut were collected and reformed to create this enormous masterpiece. The sphinx has a long history in ancient Egypt, and this particular one was crafted with Hatshepsut’s face on its body. Unlike the most notable sphinx that stands in front of the Pyramids of Giza, the Sphinx of Hatshepsut has a nose.</div>
+                  
+			</div>
+		</article>
+		<article class="postcard light green">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src="static\images\rome.webp" alt="Image Title" />
+			</a>
+			<div class="postcard__text t-dark">
+				<h1 class="postcard__title green"><a href="#">‘Interior of Saint Peter’s, Rome’</a></h1>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">Who said that you need to leave New York to see Rome? Giovanni Paolo Panini’s spectacular painting Interior of Saint Peter’s, Rome presents the beautiful extravagance of Saint Peter’s Basilica. Panini created a number of images of the basilica as he traveled to Rome throughout his lifetime. This intricate painting provides viewers with the opportunity to travel across the world, and it shows how the basilica and its visitors were in the 1700s.</div>
+            </div>
+		</article>
+		<article class="postcard light yellow">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src="static\images\socrates.webp" alt="Image Title" />
+			</a>
+			<div class="postcard__text t-dark">
+				<h1 class="postcard__title yellow"><a href="#">The Death of Socrates</a></h1>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">French artist Jacques Louis David painted the profound scene in a piece he aptly titled The Death of Socrates. The painting is based on Plato’s somber record of the event. The portrait illustrates Socrates’ determined final moments, as he reaches for the hemlock while his disciples watch on in despair and anguish.
+                    The painting is one of the most famous art pieces at The Met and it’s not hard to see why. Expertly painted, it looks lifelike enough to be mistaken for a photo. The play on light is also worth calling out, it’s a masterpiece.</div>
+                
+            </div>
+		</article>
+        <article class="postcard light blue">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src="static\images\washington.webp" alt="Image Title" />
+			</a>
+			<div class="postcard__text t-dark">
+				<h1 class="postcard__title blue"><a href="#">Washington Crossing the Delaware</a></h1>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">Emanuel Leutze was a German-American history painter best known for his 1851 painting called Washington Crossing the Delaware. The painting is massive and takes center stage in a room full of breathtaking art.
+                    The scene commemorates the night of December 25-26, 1776 when General George Washington and the Continental Army crossed the Delaware River during the Revolutionary War.</div>
+                </div>
+		</article>
+		</section>
+    <section style="background-color: grey;">
+      <footer>
+        <p>&copy; 2023 A-MUSEUM WORLD. All rights reserved.</p>
+      </footer>
+      </section>
