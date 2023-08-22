@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Development Evaluation</title>
+    <style>
+        /* Reset default margin and padding */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    text-align: right;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Reset default margin and padding */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header animation */
+header {
+    position: relative;
+    background-color: #007bff;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+header .header-content {
+    opacity: 0;
+    transform: translateY(-40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+header.animated .header-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Geometric pattern background */
+header {
+  background: linear-gradient(135deg, #dca9ec 0%, #9c0fe3 100%);
+}
+
+/* Unique design elements */
+.header-title {
+    font-size: 3.5em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 0.5em;
+}
+
+.header-subtitle {
+    font-size: 1.2em;
+    opacity: 0.8;
+    margin-bottom: 1em;
+}
+
+/* Icon styling */
+.header-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-icons i {
+    font-size: 2em;
+    margin: 0 1em;
+    transition: transform 0.3s ease-in-out;
+}
+
+.header-icons i:hover {
+    transform: translateY(-5px);
+}
+
+/* img{
+    width: 100px; /* Adjust the image width as needed */
+  /* height: auto; /* Maintain the aspect ratio */
+  /* margin-right: 20px;  */
+/* } */ */ */
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+    font-size: 20px;
+}
+nav li:hover {
+    color:orangered;
+}
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.hero {
+    background-image: url(skasc.jpg);
+    background-size: cover;
+    color: #fff;
+    padding: 10em 0;
+    text-align: center;
+}
+/* button {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 0.8em 1.3em 0.8em 0.9em;
+  color: white;
+  background: #ad5389;
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  border: none;
+  letter-spacing: 0.05em;
+  border-radius: 16px;
+} */
+
+button svg {
+  margin-right: 3px;
+  transform: rotate(30deg);
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+button span {
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+button:hover svg {
+  transform: translateX(5px) rotate(90deg);
+}
+
+button:hover span {
+  transform: translateX(7px);
+}
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.about, .research,.purpose, .mission, .offer {
+    background-color: #f5f5f5;
+    padding: 3em 0;
+    text-align: center;
+    
+}
+
+
+/* Footer styling */
+footer {
+  background: linear-gradient(135deg, #dca9ec 0%, #9c0fe3 100%);
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+/* img 
+{
+    border-radius: 50%;
+    text-align: right
+} */
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    nav ul {
+        text-align: center;
+    }
+
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.split-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  align-items: first baseline; 
+  background-color: #f0eded;
+  color: white;
+  padding: 20px;
+}
+
+
+.right-side {
+  flex: 3;
+  padding: 60px;
+  color: #000000;
+  background-image: url("ce.avif");
+}
+
+.split-button {
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 16px;
+  background-color: #FFC700;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+.split-button:hover {
+  background-color: #FFD600;
+}
+
+
+    </style>
+</head>
+<body>
+    <img src="sklog.png" alt="logo" width="1470" height="150">
+    <header>
+    </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="career-path.html">Career path</a></li>
+                <li><a href="acc.html">MyAccount</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <div class="split-container">
+        <div class="left-side">
+          <a href="acc.html"><button class="split-button">Account</button></a>
+          <a href="certificates.html"><button class="split-button">Certificates</button></a>
+          <a href="careervis.html"><button class="split-button">Career</button></a>
+        </div>
+        <div class="right-side">
+          <h1 style="text-align: center;">Certificates page</h1>
+          <p style="text-align: center;">You can upoad your certificates to get the accurate career-path recommendation</p>
+
+          <form enctype="multipart/form-data">
+            <label for="pdfUpload" class="file-label">
+              <h3><b>Upload Your certificates</b></h3><br><br>
+              <input type="file" name="pdfUpload" id="pdfUpload" accept=".pdf,.dox" onchange="displayPDF()">
+              
+            </label>
+          </form>
+          <div class="right-side">
+            <h1></h1>
+            <h3><b>Your Certificates</b></h3>
+            <div id="pdfContainer">
+              <iframe id="pdfFrame" frameborder="2000" style="size: 300px;"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    <footer>
+        <p>&copy; 2023 Career Development Evaluation. All rights reserved.</p>
+    </footer>
+<script>
+  function displayPDF() {
+    const pdfInput = document.getElementById('pdfUpload');
+    const pdfFrame = document.getElementById('pdfFrame');
+
+  const selectedPDF = pdfInput.files[0];
+
+  if (selectedPDF) {
+    const pdfUrl = URL.createObjectURL(selectedPDF);
+    pdfFrame.src = pdfUrl;
+    pdfFrame.style.display = 'block';
+  } else {
+    pdfFrame.src = '';
+    pdfFrame.style.display = 'none';
+  }
+}
+
+</script>
+</body>
+</html>

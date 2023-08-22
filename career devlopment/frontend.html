@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        header {
+    position: relative;
+    background-color: #007bff;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+    overflow: hidden;
+}
+#n {
+    text-align: right;
+}
+header .header-content {
+    opacity: 0;
+    transform: translateY(-40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+header.animated .header-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Geometric pattern background */
+header {
+    background: linear-gradient(135deg, #dca9ec 0%, #9c0fe3 100%);
+    padding: 1em 0;
+}
+
+/* Unique design elements */
+.header-title {
+    font-size: 3.5em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 0.5em;
+}
+
+.header-subtitle {
+    font-size: 1.2em;
+    opacity: 0.8;
+    margin-bottom: 1em;
+}
+
+/* Icon styling */
+.header-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-icons i {
+    font-size: 2em;
+    margin: 0 1em;
+    transition: transform 0.3s ease-in-out;
+}
+
+.header-icons i:hover {
+    transform: translateY(-5px);
+}
+
+img{
+    display: flex;
+    align-items: flex-end;
+}
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+.hero {
+    background-image: url(skasc.jpg);
+    background-size: cover;
+    color: #fff;
+    padding: 10em 0;
+    text-align: center;
+}
+        /* Reset default margin and padding */
+        body, h1, h2, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            background-image: url("cour.avif");
+            
+        }
+
+        .roadmap {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .stage {
+            border-left: 4px solid #007bff;
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+
+        .sublist {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding-left: 15px;
+        }
+
+        li {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+footer {
+    background: linear-gradient(135deg, #dca9ec 0%, #9c0fe3 100%);
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+/* img 
+{
+    border-radius: 50%;
+    text-align: right
+} */
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    nav ul {
+        text-align: center;
+    }
+
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+    </style>
+    <title>Front-End Development Roadmap</title>
+</head>
+<body>
+    <img src="sklog.png" alt="logo" width="1470" height="150">
+    <header>
+    </div>
+        <nav>
+            <ul id="n">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="career-path.html">Career path</a></li>
+                <li><a href="acc.html">Account</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="roadmap">
+        <h1>Front-End Development Roadmap</h1>
+
+        <p style="font-size: 18px;">Front-end, also known as client-side development, refers to the part of web development that focuses on creating the user 
+            interface and user experience of a website or web application.Employment of web developers in the US is projected to grow 13% from 2020 to 2030 , which is much faster than the average for all occupations.
+            Front end Developer salary in India ranges between ₹ 1.2 Lakhs to ₹ 11.4 Lakhs with an average annual salary of ₹ 4.0 Lakhs. Salary estimates are based on 31.1k latest salaries received from Front end Developers.</p>
+        
+            <div style="background-color: #ebe58d; color: rgb(0, 0, 0); text-align: center; padding: 10px;">
+            <h3>Complete the stage 5 to unlock a expert guidance!</h3>
+        </div><br>
+        <div class="stage">
+            <h2>Stage 1: Introduction to Front-End Development</h2>
+            <ul class="sublist">
+                <li>Understand the role of front-end development</li>
+                <li>Learn about HTML, CSS, and JavaScript</li>
+                <li>Set up a development environment</li>
+                <a href="frresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                <a href="fronttest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+
+        <div class="stage">
+            <h2>Stage 2: HTML Fundamentals</h2>
+            <ul class="sublist">
+                <li>Learn basic structure of HTML documents</li>
+                <li>Study HTML elements, tags, and attributes</li>
+                <li>Create simple web pages using HTML</li>
+                <a href="frresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                  <a href="fronttest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+
+        <div class="stage">
+            <h2>Stage 3: CSS Basics</h2>
+            <ul class="sublist">
+                <li>Understand selectors, properties, and values</li>
+                <li>Apply styling to HTML elements</li>
+                <li>Learn about the CSS box model and positioning</li>
+                <a href="frresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                  <a href="fronttest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+
+        <div class="stage">
+            <h2>Stage 4: Responsive Web Design</h2>
+            <ul class="sublist">
+                <li>Study responsive design principles</li>
+                <li>Learn about media queries and breakpoints</li>
+                <li>Practice creating responsive layouts using CSS Grid and Flexbox</li>
+                <a href="frresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                  <a href="fronttest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+
+        <div class="stage">
+            <h2>Stage 5: CSS Advanced Concepts</h2>
+            <ul class="sublist">
+                <li>Explore CSS preprocessors like Sass or LESS</li>
+                <li>Learn about CSS variables, animations, and transitions</li>
+                <li>Study layout frameworks like Bootstrap or Foundation</li>
+                <a href="frresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                  <a href="fronttest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+
+        <div class="stage">
+            <h2>Stage 6: JavaScript Fundamentals</h2>
+            <ul class="sublist">
+                <li>Learn basic JavaScript concepts: variables, data types, operators</li>
+                <li>Understand control structures: loops and conditionals</li>
+                <li>Practice DOM manipulation to interact with HTML elements</li>
+                <a href="frresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                  <a href="fronttest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+        <div class="stage">
+            <h2>Stage 7: JavaScript Intermediate</h2>
+            <ul class="sublist">
+                <li>Study functions, scope, and closures</li>
+                <li>Learn about asynchronous programming and callbacks</li>
+                <li>Practice working with arrays and objects</li>
+                <a href="frresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                  <a href="fronttest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+
+        <div class="stage">
+            <h2>Stage 8: JavaScript Libraries and Frameworks</h2>
+            <ul class="sublist">
+                <li>Explore jQuery for simplified DOM manipulation</li>
+                <li>Learn about front-end frameworks like React, Vue.js, or Angular</li>
+                <li>Understand component-based architecture and state management</li>
+                <a href="frresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                  <a href="fronttest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+
+        <div class="stage">
+            <h2>Stage 9: Web Performance and Optimization</h2>
+            <ul class="sublist">
+                <li>Study techniques for optimizing website speed and performance</li>
+                <li>Learn about code minification, lazy loading, and image optimization</li>
+                <li>Explore tools like Lighthouse for performance audits</li>
+                <a href="frresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                  <a href="fronttest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+
+        <div class="stage">
+            <h2>Stage 10: CSS Preprocessors and Postprocessors</h2>
+            <ul class="sublist">
+                <li>Dive deeper into Sass or LESS for more advanced styling</li>
+                <li>Explore CSS-in-JS solutions like styled-components</li>
+                <li>Learn about CSS postprocessors for autoprefixing and optimization</li>
+                <a href="frresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                  <a href="fronttest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+        <div class="stage">
+            <h2>Stage 11: Version Control with Git</h2>
+            <ul class="sublist">
+                <li>Understand version control concepts like repositories and commits</li>
+                <li>Learn how to use Git for tracking changes and collaborating</li>
+                <li>Practice branching, merging, and resolving conflicts</li>
+                <a href="frresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                  <a href="fronttest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+
+        <div class="stage">
+            <h2>Stage 12: Web Accessibility</h2>
+            <ul class="sublist">
+                <li>Study web accessibility standards and guidelines (WCAG)</li>
+                <li>Learn how to create accessible content for people with disabilities</li>
+                <li>Use tools to check and improve website accessibility</li>
+                <a href="frresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                  <a href="fronttest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+
+        <div class="stage">
+            <h2>Stage 13: Build Tools and Task Runners</h2>
+            <ul class="sublist">
+                <li>Explore build tools like Webpack, Parcel, or Rollup</li>
+                <li>Learn about task runners like Gulp or Grunt for automation</li>
+                <li>Understand bundling, minification, and optimization of assets</li>
+                <a href="frresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                  <a href="fronttest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+
+        <div class="stage">
+            <h2>Stage 14: CSS Architecture and Design Patterns</h2>
+            <ul class="sublist">
+                <li>Study scalable and maintainable CSS architectures</li>
+                <li>Learn about BEM (Block, Element, Modifier) and other naming conventions</li>
+                <li>Explore CSS design patterns for consistent styling</li>
+                <a href="frresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                  <a href="fronttest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+
+        <div class="stage">
+            <h2>Stage 15: Testing and Debugging</h2>
+            <ul class="sublist">
+                <li>Learn about testing frameworks like Jest or Mocha</li>
+                <li>Understand different testing types: unit, integration, and end-to-end</li>
+                <li>Practice debugging techniques using browser developer tools</li>
+                <a href="frresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                  <a href="fronttest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+        <div class="stage">
+            <h2>Stage 16: Browser Compatibility</h2>
+            <ul class="sublist">
+                <li>Understand cross-browser compatibility issues</li>
+                <li>Learn about browser-specific prefixes and feature detection</li>
+                <li>Explore tools like Can I use to check browser support</li>
+                <a href="frresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                  <a href="fronttest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+
+        <div class="stage">
+            <h2>Stage 17: Web Hosting and Deployment</h2>
+            <ul class="sublist">
+                <li>Learn about domain names, hosting providers, and DNS</li>
+                <li>Understand different hosting options: shared, VPS, cloud</li>
+                <li>Deploy your website using FTP, Git-based deployment, or hosting platforms</li>
+                <a href="frresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                  <a href="fronttest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+        <div class="stage">
+            <h2>Stage 18: Web Security and HTTPS</h2>
+            <ul class="sublist">
+                <li>Understand common web security threats</li>
+                <li>Learn about HTTPS, SSL certificates, and secure connections</li>
+                <li>Implement security best practices to protect user data</li>
+                <a href="frresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                  <a href="fronttest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+
+        <div class="stage">
+            <h2>Stage 19: APIs and Data Fetching</h2>
+            <ul class="sublist">
+                <li>Explore different types of APIs: REST, GraphQL, JSON</li>
+                <li>Learn how to make API requests using Fetch or libraries like Axios</li>
+                <li>Practice data fetching and displaying dynamic content on your website</li>
+                <a href="frresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                  <a href="fronttest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+        <div class="stage">
+            <h2>Stage 20: Continuous Learning and Industry Trends</h2>
+            <ul class="sublist">
+                <li>Stay updated with the latest front-end technologies and trends</li>
+                <li>Participate in coding challenges, workshops, and online communities</li>
+                <li>Contribute to open-source projects and expand your portfolio</li>
+                <a href="frresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                  <a href="fronttest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 Career Development Evaluation. All rights reserved.</p>
+    </footer>
+</body>
+</html>

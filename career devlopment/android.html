@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        header {
+    position: relative;
+    background-color: #007bff;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+    overflow: hidden;
+}
+#n {
+    text-align: right;
+}
+header .header-content {
+    opacity: 0;
+    transform: translateY(-40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+header.animated .header-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Geometric pattern background */
+header {
+    background: linear-gradient(135deg, #dca9ec 0%, #9c0fe3 100%);
+}
+
+/* Unique design elements */
+.header-title {
+    font-size: 3.5em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 0.5em;
+}
+
+.header-subtitle {
+    font-size: 1.2em;
+    opacity: 0.8;
+    margin-bottom: 1em;
+}
+
+/* Icon styling */
+.header-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-icons i {
+    font-size: 2em;
+    margin: 0 1em;
+    transition: transform 0.3s ease-in-out;
+}
+
+.header-icons i:hover {
+    transform: translateY(-5px);
+}
+
+img{
+    display: flex;
+    align-items: flex-end;
+}
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+.hero {
+    background-image: url(skasc.jpg);
+    background-size: cover;
+    color: #fff;
+    padding: 10em 0;
+    text-align: center;
+}
+        /* Reset default margin and padding */
+        body, h1, h2, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            background-image: url("cour.avif");
+        }
+
+        .roadmap {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .stage {
+            border-left: 4px solid #007bff;
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+
+        .sublist {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding-left: 15px;
+        }
+
+        li {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #dca9ec 0%, #9c0fe3 100%);
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+/* img 
+{
+    border-radius: 50%;
+    text-align: right
+} */
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    nav ul {
+        text-align: center;
+    }
+
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+    </style>
+    <title>Back-End Development Roadmap</title>
+</head>
+<body>
+    <img src="sklog.png" alt="logo" width="1470" height="150">
+    <header>
+    </div>
+        <nav>
+            <ul id="n">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="career-path.html">Career path</a></li>
+                <li><a href="acc.html">Account</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="roadmap">
+        <h1>Andriod Development Roadmap</h1>
+        <p style="font-size: 18px;">Android development refers to the process of creating applications (apps) that run on the Android operating system, which is primarily used on mobile devices like smartphones and tablets. Android apps can serve a variety of purposes, from entertainment and communication to productivity and utility.Android Developer salary in India ranges between ₹ 1.4 Lakhs to ₹ 10.0 Lakhs with an average annual salary of ₹ 3.6 Lakhs.</p>
+        <div style="background-color: #ebe58d; color: rgb(0, 0, 0); text-align: center; padding: 10px;">
+            <h3>Complete the stage 5 to unlock a expert guidance!</h3>
+        </div><br>
+<div class="stage">
+    <h2>Stage 1: Introduction to Android Development</h2>
+    <ul class="sublist">
+        <li>Understand the basics of Android operating system</li>
+        <li>Learn about Android development tools and environment setup</li>
+        <li>Explore the Android Studio IDE and its features</li>
+        <li>Create your first "Hello World" Android app</li>
+         <a href="andresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+        <a href="Androidtest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+    </ul>
+</div>
+
+<div class="stage">
+    <h2>Stage 2: Java Programming for Android</h2>
+    <ul class="sublist">
+        <li>Learn Java programming fundamentals: variables, data types, operators</li>
+        <li>Understand control structures: if statements, loops</li>
+        <li>Explore object-oriented programming concepts: classes, objects, methods</li>
+        <li>Practice Java programming with Android apps</li>
+        <a href="andresource.html">"<button type="button" class="btn btn-primary">Resource</button></a>
+        <a href="Androidtest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+    </ul>
+</div>
+
+<div class="stage">
+    <h2>Stage 3: Building User Interfaces</h2>
+    <ul class="sublist">
+        <li>Learn about Android XML layout files and views</li>
+        <li>Understand layout types: LinearLayout, RelativeLayout, ConstraintLayout</li>
+        <li>Practice creating interactive UI elements: buttons, text fields, images</li>
+        <li>Implement event handling and user interactions</li>
+       <a href="andresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+        <a href="Androidtest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+    </ul>
+
+<div class="stage">
+    <h2>Stage 4: Working with Activities and Intents</h2>
+    <ul class="sublist">
+        <li>Understand the activity lifecycle and its states</li>
+        <li>Create and manage multiple activities in an Android app</li>
+        <li>Learn about explicit and implicit intents</li>
+        <li>Practice passing data between activities using intents</li>
+        <a href="andresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+        <a href="Androidtest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+    </ul>
+</div>
+
+<div class="stage">
+    <h2>Stage 5: Fragments and UI Navigation</h2>
+    <ul class="sublist">
+        <li>Explore fragments for modular UI components</li>
+        <li>Understand fragment lifecycle and communication between fragments</li>
+        <li>Implement navigation using the Navigation Component</li>
+        <li>Create a navigation drawer and bottom navigation</li>
+        <a href="andresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+        <a href="Androidtest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+    </ul>
+</div>
+
+<div class="stage">
+    <h2>Stage 6: Data Persistence with SQLite</h2>
+    <ul class="sublist">
+        <li>Learn about SQLite database and its usage in Android</li>
+        <li>Create, read, update, and delete data using SQLite</li>
+        <li>Practice content providers for data sharing between apps</li>
+        <li>Explore Room Persistence Library for simplified database operations</li>
+        <a href="andresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+        <a href="Androidtest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+    </ul>
+</div>
+
+<div class="stage">
+    <h2>Stage 7: User Interface Design and Material Design</h2>
+    <ul class="sublist">
+        <li>Explore UI design principles and guidelines</li>
+        <li>Learn about Material Design components and patterns</li>
+        <li>Practice creating responsive and visually appealing layouts</li>
+        <li>Implement animations and transitions for smooth user experience</li>
+        <a href="andresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+        <a href="Androidtest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+    </ul>
+</div>
+
+<div class="stage">
+    <h2>Stage 8: Background Processing and Multithreading</h2>
+    <ul class="sublist">
+        <li>Understand the importance of background processing</li>
+        <li>Explore AsyncTask, Threads, and Handler for multithreading</li>
+        <li>Implement background tasks using IntentService and JobScheduler</li>
+        <li>Practice data synchronization and avoiding ANR (Application Not Responding)</li>
+        <a href="andresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+        <a href="Androidtest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+    </ul>
+</div>
+
+<div class="stage">
+    <h2>Stage 9: Networking and Web APIs</h2>
+    <ul class="sublist">
+        <li>Learn about networking libraries like Retrofit and Volley</li>
+        <li>Understand RESTful APIs and JSON parsing</li>
+        <li>Practice making API requests and handling responses</li>
+        <li>Implement offline caching and error handling for network requests</li>
+        <a href="andresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+        <a href="Androidtest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+    </ul>
+</div>
+
+<div class="stage">
+    <h2>Stage 10: Working with Sensors and Location</h2>
+    <ul class="sublist">
+        <li>Explore device sensors like accelerometer, GPS, and compass</li>
+        <li>Integrate location services using Google Play Services</li>
+        <li>Practice retrieving and displaying user's current location</li>
+        <li>Implement geofencing and location-based features</li>
+         <a href="andresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+        <a href="Androidtest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+    </ul>
+</div>
+
+<div class="stage">
+    <h2>Stage 11: Notifications and Background Tasks</h2>
+    <ul class="sublist">
+        <li>Implement local notifications using NotificationCompat</li>
+        <li>Explore Firebase Cloud Messaging for remote notifications</li>
+        <li>Practice handling background tasks with WorkManager</li>
+        <li>Learn about Doze Mode and App Standby for battery optimization</li>
+         <a href="andresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+        <a href="Androidtest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+    </ul>
+</div>
+
+<div class="stage">
+    <h2>Stage 12: Advanced UI Components</h2>
+    <ul class="sublist">
+        <li>Explore advanced UI components like ViewPager, RecyclerView</li>
+        <li>Learn about ConstraintLayout for complex layouts</li>
+        <li>Implement custom views and touch gestures</li>
+        <li>Practice handling user input with EditText, Buttons, etc.</li>
+         <a href="andresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+        <a href="Androidtest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+    </ul>
+</div>
+
+<div class="stage">
+    <h2>Stage 13: Security and Privacy</h2>
+    <ul class="sublist">
+        <li>Learn about secure coding practices and data encryption</li>
+        <li>Implement biometric authentication using Fingerprint or Face ID</li>
+        <li>Practice securing sensitive information and user data</li>
+        <li>Understand app permissions and user privacy concerns</li>
+         <a href="andresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+        <a href="Androidtest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+    </ul>
+</div>
+
+<div class="stage">
+    <h2>Stage 14: Material Design and User Experience</h2>
+    <ul class="sublist">
+        <li>Learn about Material Design principles and guidelines</li>
+        <li>Implement responsive layouts and UI components</li>
+        <li>Practice creating visually appealing and user-friendly interfaces</li>
+        <li>Explore animations and transitions for a polished user experience</li>
+         <a href="andresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+        <a href="Androidtest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+    </ul>
+</div>
+
+<div class="stage">
+    <h2>Stage 15: Location and Maps Integration</h2>
+    <ul class="sublist">
+        <li>Integrate Google Maps SDK for displaying maps and locations</li>
+        <li>Implement location tracking using GPS and network providers</li>
+        <li>Practice geocoding and reverse geocoding for address manipulation</li>
+        <li>Explore location-based services and geofencing</li>
+         <a href="andresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+        <a href="Androidtest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+    </ul>
+</div>
+
+<div class="stage">
+    <h2>Stage 16: Performance Optimization</h2>
+    <ul class="sublist">
+        <li>Profile and optimize app performance using Android Profiler</li>
+        <li>Practice optimizing memory usage and reducing app size</li>
+        <li>Learn about network optimization and reducing data usage</li>
+        <li>Implement lazy loading and efficient data fetching</li>
+         <a href="andresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+        <a href="Androidtest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+</div>
+
+<div class="stage">
+    <h2>Stage 17: Testing and Debugging</h2>
+    <ul class="sublist">
+        <li>Learn about different types of testing: unit, integration, UI, etc.</li>
+        <li>Practice writing unit tests using JUnit and Espresso</li>
+        <li>Implement UI testing and automation with Espresso</li>
+        <li>Use debugging tools and troubleshoot common issues</li>
+         <a href="andresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+        <a href="Androidtest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+    </ul>
+</div>
+<div class="stage">
+    <h2>Stage 18: Continuous Learning and Industry Trends</h2>
+    <ul class="sublist">
+        <li>Stay updated with the latest Android development trends</li>
+        <li>Participate in conferences, workshops, and developer communities</li>
+        <li>Contribute to open-source projects and share your knowledge</li>
+        <li>Explore emerging technologies like Jetpack Compose and Kotlin Multiplatform</li>
+         <a href="andresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+        <a href="Androidtest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+    </ul>
+</div>
+
+
+
+    <footer>
+        <p>&copy; 2023 Career Development Evaluation. All rights reserved.</p>
+    </footer>
+</body>
+</html>

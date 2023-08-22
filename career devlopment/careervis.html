@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Development Evaluation</title>
+    <style>
+        /* Reset default margin and padding */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    text-align: right;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Reset default margin and padding */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header animation */
+header {
+    position: relative;
+    background-color: #007bff;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+header .header-content {
+    opacity: 0;
+    transform: translateY(-40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+header.animated .header-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Geometric pattern background */
+header {
+    background: linear-gradient(135deg, #dca9ec 0%, #9c0fe3 100%);
+}
+
+/* Unique design elements */
+.header-title {
+    font-size: 3.5em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 0.5em;
+}
+
+.header-subtitle {
+    font-size: 1.2em;
+    opacity: 0.8;
+    margin-bottom: 1em;
+}
+
+/* Icon styling */
+.header-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-icons i {
+    font-size: 2em;
+    margin: 0 1em;
+    transition: transform 0.3s ease-in-out;
+}
+
+.header-icons i:hover {
+    transform: translateY(-5px);
+}
+
+/* img{
+    width: 100px; /* Adjust the image width as needed */
+  /* height: auto; /* Maintain the aspect ratio */
+  /* margin-right: 20px;  */
+/* } */ */ */
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+    font-size: 20px;
+}
+nav li:hover {
+    color:orangered;
+}
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.hero {
+    background-image: url(skasc.jpg);
+    background-size: cover;
+    color: #fff;
+    padding: 10em 0;
+    text-align: center;
+}
+/* button {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 0.8em 1.3em 0.8em 0.9em;
+  color: white;
+  background: #ad5389;
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  border: none;
+  letter-spacing: 0.05em;
+  border-radius: 16px;
+} */
+
+button svg {
+  margin-right: 3px;
+  transform: rotate(30deg);
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+button span {
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+button:hover svg {
+  transform: translateX(5px) rotate(90deg);
+}
+
+button:hover span {
+  transform: translateX(7px);
+}
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.about, .research,.purpose, .mission, .offer {
+    background-color: #f5f5f5;
+    padding: 3em 0;
+    text-align: center;
+    
+}
+
+
+/* Footer styling */
+footer {
+  background: linear-gradient(135deg, #dca9ec 0%, #9c0fe3 100%);
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+/* img 
+{
+    border-radius: 50%;
+    text-align: right
+} */
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    nav ul {
+        text-align: center;
+    }
+
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+
+}
+
+.split-container {
+  display: flex;
+  width: 100%;
+  height: 425vh;
+  flex-grow: 1
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  align-items: first baseline; 
+  background-color: #f0eded;
+  color: white;
+  padding: 20px;
+  padding-bottom: 20px;
+}
+
+
+.right-side {
+  flex: 3;
+  padding: 60px;
+  background-color: #f5f5f5; /* or #fafafa */
+
+
+  /* background-image: url("c.avif");
+  background-size: 800px 800px; */
+}
+
+.split-button {
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 16px;
+  background-color: #FFC700;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+.split-button:hover {
+  background-color: #FFD600;
+}
+.form-container {
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #fff;
+  margin: 1rem 0 .5rem;
+  width: 100%;
+}
+
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 24px 24px;
+  gap: 16px;
+  text-align: center;
+}
+
+.form-box {
+  max-width: 400px;
+  background: #bfd3e9;
+  overflow: hidden;
+  border-radius: 16px;
+  color: #010101;
+  margin: 50px auto;
+}
+
+.input {
+  background: none;
+  border: 0;
+  outline: 0;
+  height: 40px;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  font-size: .9rem;
+  padding: 8px 15px;
+}
+
+.form-section {
+  padding: 16px;
+  font-size: .85rem;
+  background-color: #e0ecfb;
+  box-shadow: rgb(0 0 0 / 8%) 0 -1px;
+}
+
+.form-section a {
+  font-weight: bold;
+  color: #0066ff;
+  transition: color .3s ease;
+}
+
+.form-section a:hover {
+  color: #005ce6;
+  text-decoration: underline;
+}
+
+/*Button*/
+.form button {
+  background-color: #0066ff;
+  color: #ffffff;
+  border: 0;
+  border-radius: 24px;
+  padding: 10px 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color .3s ease;
+}
+
+.form button:hover {
+  background-color: #005ce6;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #000000;
+}
+table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .alert {
+            background-color: #f8d7da; /* Red or any other suitable color */
+            color: #721c24; /* Text color for alert */
+            padding: 10px;
+            text-align: center;
+        }
+        #scrollToTopButton {
+        display: none;
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        z-index: 99;
+        background-color: #af0ee4; /* Button background color */
+        color: #fff; /* Button text color */
+        border: none;
+        border-radius: 50%;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+    </style>
+</head>
+<body>
+    <img src="sklog.png" alt="logo" width="1470" height="150">
+    <header>
+    </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="career-path.html">Career path</a></li>
+                <li><a href="acc.html">MyAccount</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <div class="split-container">
+        <div class="left-side">
+          <a href="acc.html"><button class="split-button">Account</button></a>
+          <a href="certificates.html"><button class="split-button">Certificates</button></a>
+          <a href="careervis.html"><button class="split-button">Career</button></a>
+          
+        </div>
+        <div class="right-side">
+          <h1>Your career choices</h1><br>
+          <h1 style="text-align: center;">Front-End developer career growth</h1><br>
+          <h4>Average salary and growth of a front end developer in next 10 years</h4><br>
+          <div style="align-items: center;justify-content:center;display: flex;">
+           <img src="front chart.png" height="400px" width="500px"></div>
+           <br><br>
+            <table>
+              <h1>2023-2025</h1>
+              <tr>
+                <th>Level</th>
+                <th>Salary</th>
+              </tr>
+              <tr>
+                <td>Entry-Level</td>
+                <td>INR 300,000 - INR 600,000</td>
+              </tr>
+              <tr>
+                <td>Mid-Level</td>
+                <td>INR 600,000 - INR 1,200,000</td>
+              </tr>
+              <tr>
+                <td>Senior-Level</td>
+                <td>INR 1,200,000 - INR 2,000,000+</td>
+              </tr>
+            </table>
+            <br>
+            <table>
+              <h1>2026-2028</h1>
+              <tr>
+                <th>Level</th>
+                <th>Salary</th>
+              </tr>
+              <tr>
+                <td>Entry-Level</td>
+                <td>INR 400,000 - INR 800,000</td>
+              </tr>
+              <tr>
+                <td>Mid-Level</td>
+                <td>INR 800,000 - INR 1,500,000</td>
+              </tr>
+              <tr>
+                <td>Senior-Level</td>
+                <td>INR 1,500,000 - INR 2,500,000+</td>
+              </tr>
+            </table>
+            <br>
+            <table>
+              <h1>2029-2032</h1>
+              <tr>
+                <th>Level</th>
+                <th>Salary</th>
+              </tr>
+              <tr>
+                <td>Entry-Level</td>
+                <td>INR 500,000 - INR 1,000,000</td>
+              </tr>
+              <tr>
+                <td>Mid-Level</td>
+                <td>INR 1,000,000 - INR 2,000,000</td>
+              </tr>
+              <tr>
+                <td>Senior-Level</td>
+                <td>INR 2,000,000 - INR 3,500,000+</td>
+              </tr>
+            </table>
+            <br>
+            <h1 style="text-align: center;">Back-End developer career growth</h1><br>
+          <h4>Average salary and growth of a back end developer in next 10 years</h4><br>
+          <div style="align-items: center;justify-content:center;display: flex;">
+           <img src="back chart.png" height="400px" width="500px"></div>
+           <br><br>
+            <table>
+              <h1>2023-2025</h1>
+              <tr>
+                <th>Level</th>
+                <th>Salary</th>
+              </tr>
+              <tr>
+                <td>Entry-Level</td>
+                <td>INR 400,000 - INR 800,000</td>
+              </tr>
+              <tr>
+                <td>Mid-Level</td>
+                <td> INR 800,000 - INR 1,500,000</td>
+              </tr>
+              <tr>
+                <td>Senior-Level</td>
+                <td> INR 1,500,000 - INR 2,500,000+</td>
+              </tr>
+            </table>
+            <br>
+            <table>
+              <h1>2026-2028</h1>
+              <tr>
+                <th>Level</th>
+                <th>Salary</th>
+              </tr>
+              <tr>
+                <td>Entry-Level</td>
+                <td> INR 500,000 - INR 1,000,000</td>
+              </tr>
+              <tr>
+                <td>Mid-Level</td>
+                <td> INR 1,000,000 - INR 2,000,000</td>
+              </tr>
+              <tr>
+                <td>Senior-Level</td>
+                <td>INR 2,000,000 - INR 3,500,000+</td>
+              </tr>
+            </table>
+            <br>
+            <table>
+              <h1>2029-2032</h1>
+              <tr>
+                <th>Level</th>
+                <th>Salary</th>
+              </tr>
+              <tr>
+                <td>Entry-Level</td>
+                <td> INR 600,000 - INR 1,200,000 </td>
+              </tr>
+              <tr>
+                <td>Mid-Level</td>
+                <td>INR 1,200,000 - INR 2,500,000 </td>
+              </tr>
+              <tr>
+                <td>Senior-Level</td>
+                <td> INR 2,500,000 - INR 4,500,000+</td>
+              </tr>
+            </table>
+            <br>
+            <button id="scrollToTopButton" onclick="scrollToTop()"><i class="fas fa-angle-double-up" style="size: 80px;"></i></button>
+            <div class="alert">
+              <strong>Disclaimer:</strong> The future job data provided on this website may vary based on different situations or factors. Please consider this information as indicative and subject to change.
+          </div>
+     </div>
+        </div>
+      </div><br>
+    <footer >
+        <p>&copy; 2023 Career Development Evaluation. All rights reserved.</p>
+    </footer>
+    <script>
+      // Function to show/hide the button based on scroll position
+      window.onscroll = function() {
+          scrollFunction();
+      };
+      
+      function scrollFunction() {
+          var button = document.getElementById("scrollToTopButton");
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              button.style.display = "block";
+          } else {
+              button.style.display = "none";
+          }
+      }
+      
+      // Function to scroll to the top of the page
+      function scrollToTop() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+      }
+  </script>
+  
+</body>
+</html>

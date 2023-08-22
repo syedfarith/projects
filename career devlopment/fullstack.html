@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    header {
+    position: relative;
+    background-color: #007bff;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+    overflow: hidden;
+}
+#n {
+    text-align: right;
+}
+header .header-content {
+    opacity: 0;
+    transform: translateY(-40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+header.animated .header-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Geometric pattern background */
+header {
+    background: linear-gradient(135deg, #dca9ec 0%, #9c0fe3 100%);
+}
+
+/* Unique design elements */
+.header-title {
+    font-size: 3.5em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 0.5em;
+}
+
+.header-subtitle {
+    font-size: 1.2em;
+    opacity: 0.8;
+    margin-bottom: 1em;
+}
+
+/* Icon styling */
+.header-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-icons i {
+    font-size: 2em;
+    margin: 0 1em;
+    transition: transform 0.3s ease-in-out;
+}
+
+.header-icons i:hover {
+    transform: translateY(-5px);
+}
+
+img{
+    display: flex;
+    align-items: flex-end;
+}
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+.hero {
+    background-image: url(skasc.jpg);
+    background-size: cover;
+    color: #fff;
+    padding: 10em 0;
+    text-align: center;
+}
+        /* Reset default margin and padding */
+        body, h1, h2, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            background-image: url("cour.avif");
+        }
+
+        .roadmap {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .stage {
+            border-left: 4px solid #007bff;
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+
+        .sublist {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding-left: 15px;
+        }
+
+        li {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #dca9ec 0%, #9c0fe3 100%);
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+/* img 
+{
+    border-radius: 50%;
+    text-align: right
+} */
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    nav ul {
+        text-align: center;
+    }
+
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+    </style>
+    <title>Back-End Development Roadmap</title>
+</head>
+<body>
+    <img src="sklog.png" alt="logo" width="1470" height="150">
+    <header>
+    </div>
+        <nav>
+            <ul id="n">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="career-path.html">Career path</a></li>
+                <li><a href="acc.html">Account</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="roadmap">
+        <h1>Full stack web Development Roadmap</h1>
+        <p style="font-size: 18px;">Full-stack web development refers to the practice of building and maintaining both the front-end and back-end components of a web application. 
+            full stack developers are paid well and it is considered one of the high-paying careers in India. An average salary for a full stack developer in India is 6.5 LPA and the salary ranges from 2.5 LPA to 17.0 LPA.</p>
+        <div style="background-color: #ebe58d; color: rgb(0, 0, 0); text-align: center; padding: 10px;">
+            <h3>Complete the stage 5 to unlock a expert guidance!</h3>
+        </div><br>
+
+
+        <div class="stage">
+            <h2>Stage 1: Introduction to Full-Stack Development</h2>
+            <ul class="sublist">
+                <li>Understand the role of a full-stack developer</li>
+                <li>Explore the importance of front-end and back-end collaboration</li>
+                <li>Learn about the skills and technologies required for full-stack development</li>
+                <li>Set up a development environment for both front-end and back-end projects</li>
+                <a href="fsresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                <a href="fulltest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+        <div class="stage">
+            <h2>Stage 2: Front-End Development</h2>
+            <ul class="sublist">
+                <li>Learn HTML, CSS, and JavaScript for building user interfaces</li>
+                <li>Explore responsive design principles and mobile-first development</li>
+                <li>Study front-end frameworks like React, Angular, or Vue.js</li>
+                <li>Practice building interactive web applications and UI components</li>
+               <a href="fsresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                <a href="fulltest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+        <div class="stage">
+            <h2>Stage 3: Front-End Frameworks</h2>
+            <ul class="sublist">
+                <li>Learn popular front-end frameworks like React, Angular, or Vue.js</li>
+                <li>Explore component-based architecture and state management</li>
+                <li>Practice building dynamic and interactive user interfaces</li>
+                <li>Integrate front-end frameworks with back-end APIs</li>
+               <a href="fsresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                <a href="fulltest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+        <!-- Stage 3: Back-End Development -->
+        <div class="stage">
+            <h2>Stage 4: Back-End Development</h2>
+            <ul class="sublist">
+                <li>Understand the server-side architecture and data flow</li>
+                <li>Learn server-side programming languages like Node.js, Python, Ruby, etc.</li>
+                <li>Explore back-end frameworks like Express, Django, Ruby on Rails, etc.</li>
+                <li>Practice building RESTful APIs and server-side logic</li>
+               <a href="fsresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                <a href="fulltest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+        <div class="stage">
+            <h2>Stage 5: Databases and Data Management</h2>
+            <ul class="sublist">
+                <li>Explore various database systems: relational, NoSQL, and NewSQL</li>
+                <li>Learn about data modeling, normalization, and database design principles</li>
+                <li>Practice using database management systems like MySQL, PostgreSQL, MongoDB</li>
+                <li>Implement data manipulation, querying, and transactions</li>
+               <a href="fsresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                <a href="fulltest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+    
+        <!-- Stage 5: Version Control and Collaboration -->
+        <div class="stage">
+            <h2>Stage 6: Version Control and Collaboration</h2>
+            <ul class="sublist">
+                <li>Learn the fundamentals of version control with Git</li>
+                <li>Explore Git branching, merging, and resolving conflicts</li>
+                <li>Practice collaborating on code using platforms like GitHub or GitLab</li>
+                <li>Understand pull requests and code review processes</li>
+               <a href="fsresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                <a href="fulltest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+        <div class="stage">
+            <h2>Stage 7: Cloud Services and Scalability</h2>
+            <ul class="sublist">
+                <li>Explore cloud services for storage, compute, and networking</li>
+                <li>Learn about serverless computing and microservices architecture</li>
+                <li>Scale applications dynamically to handle increased traffic</li>
+                <li>Implement cloud-based authentication, authorization, and security</li>
+               <a href="fsresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                <a href="fulltest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+        <div class="stage">
+            <h2>Stage 8: GraphQL and API Design</h2>
+            <ul class="sublist">
+                <li>Deep dive into GraphQL and its advantages over traditional REST APIs</li>
+                <li>Learn about schema design, queries, mutations, and subscriptions in GraphQL</li>
+                <li>Practice designing efficient and flexible APIs using GraphQL</li>
+                <li>Integrate GraphQL with front-end and back-end applications</li>
+               <a href="fsresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                <a href="fulltest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+    
+        <!-- Stage 12: DevOps and Deployment Strategies -->
+        <div class="stage">
+            <h2>Stage 9: DevOps and Deployment Strategies</h2>
+            <ul class="sublist">
+                <li>Understand the principles of DevOps and continuous integration/continuous deployment (CI/CD)</li>
+                <li>Set up automated build, testing, and deployment pipelines</li>
+                <li>Practice containerization with Docker and orchestration with Kubernetes</li>
+                <li>Deploy applications to various environments: development, staging, and production</li>
+               <a href="fsresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                <a href="fulltest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+    
+        <!-- Stage 13: Monitoring and Performance Optimization -->
+        <div class="stage">
+            <h2>Stage 10: Monitoring and Performance Optimization</h2>
+            <ul class="sublist">
+                <li>Implement monitoring tools for tracking application performance and health</li>
+                <li>Learn about metrics, logs, and alerts to identify and resolve issues</li>
+                <li>Optimize application performance through profiling, caching, and database tuning</li>
+                <li>Ensure high availability and scalability of applications</li>
+               <a href="fsresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                <a href="fulltest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+        <div class="stage">
+            <h2>Stage 14: Microservices Architecture</h2>
+            <ul class="sublist">
+                <li>Deep dive into microservices architecture and its benefits</li>
+                <li>Learn about building, deploying, and managing microservices-based systems</li>
+                <li>Explore service discovery, load balancing, and fault tolerance</li>
+                <li>Implement communication patterns like REST, gRPC, and event-driven architectures</li>
+               <a href="fsresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                <a href="fulltest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+        <div class="stage">
+            <h2>Stage 15: Keeping Up with Trends</h2>
+            <ul class="sublist">
+                <li>Stay updated with the latest web development technologies and practices</li>
+                <li>Explore emerging trends like Progressive Web Apps (PWAs) and WebAssembly</li>
+                <li>Participate in online communities, blogs, and conferences</li>
+                <li>Contribute to open-source projects and share your knowledge with others</li>
+               <a href="fsresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                <a href="fulltest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>    
+        </div>
+    <footer>
+        <p>&copy; 2023 Career Development Evaluation. All rights reserved.</p>
+    </footer>
+</body>
+</html>

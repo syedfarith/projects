@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        header {
+    position: relative;
+    background-color: #007bff;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+    overflow: hidden;
+}
+#n {
+    text-align: right;
+}
+header .header-content {
+    opacity: 0;
+    transform: translateY(-40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+header.animated .header-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Geometric pattern background */
+header {
+    background: linear-gradient(135deg, #dca9ec 0%, #9c0fe3 100%);
+}
+
+/* Unique design elements */
+.header-title {
+    font-size: 3.5em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 0.5em;
+}
+
+.header-subtitle {
+    font-size: 1.2em;
+    opacity: 0.8;
+    margin-bottom: 1em;
+}
+
+/* Icon styling */
+.header-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-icons i {
+    font-size: 2em;
+    margin: 0 1em;
+    transition: transform 0.3s ease-in-out;
+}
+
+.header-icons i:hover {
+    transform: translateY(-5px);
+}
+
+img{
+    display: flex;
+    align-items: flex-end;
+}
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+.hero {
+    background-image: url(skasc.jpg);
+    background-size: cover;
+    color: #fff;
+    padding: 10em 0;
+    text-align: center;
+}
+        /* Reset default margin and padding */
+        body, h1, h2, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            background-image: url("cour.avif");
+        }
+
+        .roadmap {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .stage {
+            border-left: 4px solid #007bff;
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+
+        .sublist {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding-left: 15px;
+        }
+
+        li {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #dca9ec 0%, #9c0fe3 100%);
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+/* img 
+{
+    border-radius: 50%;
+    text-align: right
+} */
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    nav ul {
+        text-align: center;
+    }
+
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+    </style>
+    <title>Back-End Development Roadmap</title>
+</head>
+<body>
+    <img src="sklog.png" alt="logo" width="1470" height="150">
+    <header>
+    </div>
+        <nav>
+            <ul id="n">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="career-path.html">Career path</a></li>
+                <li><a href="acc.html">Account</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="roadmap">
+        <h1>Basics of python Roadmap</h1>
+        <p style="font-size: 18px;">Python is a high-level, interpreted programming language known for its simplicity and readability.Which makes it a popular choice for beginners and experienced developers alike. 
+            It's widely used in various fields such as web development, scientific computing, data analysis, artificial intelligence, machine learning, automation, and more.The average salary for Python Developer is ₹5,80,000 per year in the India. The average additional cash compensation for a Python Developer in the India is ₹1,00,000, with a range from ₹29,000 - ₹2,00,250.</p>
+        <div style="background-color: #ebe58d; color: rgb(0, 0, 0); text-align: center; padding: 10px;">
+            <h3>Complete the stage 5 to unlock a expert guidance!</h3>
+        </div><br>
+
+        <div class="roadmap">
+            <div class="stage">
+                <h2>Stage 1: Introduction to Python</h2>
+                <p>Learn the basics of Python syntax, variables, and data types.</p>
+                <a href="pyresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                <a href="pytest.html"><button type="button"class="btn btn-primary">Take a test</button></a>
+            </div>
+            <div class="stage">
+                <h2>Stage 2: Control Structures</h2>
+                <p>Understand if statements, loops, and conditional logic in Python.</p>
+
+                <a href="pyresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                <a href="pytest.html"><button type="button"class="btn btn-primary">Take a test</button></a>
+            </div>
+            <div class="stage">
+                <h2>Stage 3: Functions and Modules</h2>
+                <p>Learn about defining functions and organizing code into modules.</p>
+
+                <a href="pyresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                <a href="pytest.html"><button type="button"class="btn btn-primary">Take a test</button></a>
+            </div>
+            <div class="stage">
+                <h2>Stage 4: Data Structures</h2>
+                <p>Explore lists, dictionaries, tuples, and sets for data manipulation.</p>
+
+                <a href="pyresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                <a href="pytest.html"><button type="button"class="btn btn-primary">Take a test</button></a>
+            </div>
+            <div class="stage">
+                <h2>Stage 5: Object-Oriented Programming</h2>
+                <p>Understand classes, objects, inheritance, and polymorphism.</p>
+
+                <a href="pyresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                <a href="pytest.html"><button type="button"class="btn btn-primary">Take a test</button></a>
+            </div>
+        <div class="stage">
+            <h2>Stage 6: File Handling</h2>
+            <p>Learn how to read from and write to files using Python.</p>
+            <a href="pyresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+            <a href="pytest.html"><button type="button"class="btn btn-primary">Take a test</button></a>
+        </div>
+        <div class="stage">
+            <h2>Stage 7: Error Handling</h2>
+            <p>Explore exception handling and proper error management in Python.</p>
+            <a href="pyresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+            <a href="pytest.html"><button type="button"class="btn btn-primary">Take a test</button></a>
+        </div>
+        <div class="stage">
+            <h2>Stage 8: Libraries and Modules</h2>
+            <p>Learn about popular Python libraries for various tasks (e.g., NumPy, pandas).</p>
+            <a href="pyresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+            <a href="pytest.html"><button type="button"class="btn btn-primary">Take a test</button></a>
+        </div>
+        <div class="stage">
+            <h2>Stage 9: Database Management</h2>
+            <p>Learn about SQL databases, ORM, and database design.</p>
+            <a href="pyresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+            <a href="pytest.html"><button type="button"class="btn btn-primary">Take a test</button></a>
+        </div>
+        <div class="stage">
+            <h2>Stage 10: GUI Programming</h2>
+            <p>Explore graphical user interface (GUI) development using libraries like Tkinter.</p>
+            <a href="pyresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+            <a href="pytest.html"><button type="button"class="btn btn-primary">Take a test</button></a>
+        </div>
+        </div>
+    <footer>
+        <p>&copy; 2023 Career Development Evaluation. All rights reserved.</p>
+    </footer>
+</body>
+</html>

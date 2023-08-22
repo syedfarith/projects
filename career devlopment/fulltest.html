@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Development Evaluation</title>
+    <style>
+        /* Reset default margin and padding */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    text-align: right;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Reset default margin and padding */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header animation */
+header {
+    position: relative;
+    background-color: #007bff;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+header .header-content {
+    opacity: 0;
+    transform: translateY(-40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+header.animated .header-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Geometric pattern background */
+header {
+  background: linear-gradient(135deg, #dca9ec 0%, #9c0fe3 100%);
+}
+
+/* Unique design elements */
+.header-title {
+    font-size: 3.5em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 0.5em;
+}
+
+.header-subtitle {
+    font-size: 1.2em;
+    opacity: 0.8;
+    margin-bottom: 1em;
+}
+
+/* Icon styling */
+.header-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-icons i {
+    font-size: 2em;
+    margin: 0 1em;
+    transition: transform 0.3s ease-in-out;
+}
+
+.header-icons i:hover {
+    transform: translateY(-5px);
+}
+
+/* img{
+    width: 100px; /* Adjust the image width as needed */
+  /* height: auto; /* Maintain the aspect ratio */
+  /* margin-right: 20px;  */
+/* } */ */ */
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+    font-size: 20px;
+}
+nav li:hover {
+    color:orangered;
+}
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.hero {
+    background-image: url(skasc.jpg);
+    background-size: cover;
+    color: #fff;
+    padding: 10em 0;
+    text-align: center;
+}
+button {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 0.8em 1.3em 0.8em 0.9em;
+  color: white;
+  background: #ad5389;
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  border: none;
+  letter-spacing: 0.05em;
+  border-radius: 16px;
+}
+
+button svg {
+  margin-right: 3px;
+  transform: rotate(30deg);
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+button span {
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+button:hover svg {
+  transform: translateX(5px) rotate(90deg);
+}
+
+button:hover span {
+  transform: translateX(7px);
+}
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.about, .research,.purpose, .mission, .offer {
+    background-color: #f5f5f5;
+    padding: 3em 0;
+    text-align: center;
+    
+}
+
+
+/* Footer styling */
+footer {
+  background: linear-gradient(135deg, #dca9ec 0%, #9c0fe3 100%);
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+/* img 
+{
+    border-radius: 50%;
+    text-align: right
+} */
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    nav ul {
+        text-align: center;
+    }
+
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+  
+      form {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #edeced;
+      }
+      h1 {
+        text-align: center;
+      }
+      label {
+        display: block;
+        /* font-weight: bold; */
+        margin-top: 12px;
+        font-size: 19px;
+      }
+      input[type="radio"] {
+        margin-right: 10px;
+      }
+      input[type="submit"] {
+        background-color: #8a8f92;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+      }
+      input[type="submit"]:hover {
+        background-color: darkblue;
+      }
+    
+      #sec{
+  background-image: url("test.jpg");
+ }   
+
+    </style>
+</head>
+<body>
+    <img src="sklog.png" alt="logo" width="1470" height="150">
+    <header>
+    </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="career-path.html">Career path</a></li>
+                <li><a href="acc.html">Account</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="sec">
+    <form>
+        <div style="background-color: #ebe58d; color: rgb(0, 0, 0); text-align: center; padding: 10px;">
+            <h3>Pass the test with 80% to Complete the stage</h3>
+        </div><br>
+            <ol>
+              <li>
+                <h3>What does HTML stand for?</h3>
+                <label><input type="radio" name="q1" value="a"> a) Hypertext Markup Language</label>
+                <label><input type="radio" name="q1" value="b"> b) Hyperlink and Text Markup Language</label>
+                <label><input type="radio" name="q1" value="c"> c) High-Level Text Management Language</label>
+                <label><input type="radio" name="q1" value="d"> d) Hyper Transfer Markup Language</label>
+              </li>
+              <li>
+                <h3>What is the purpose of a "web server" in backend development?</h3>
+                <label><input type="radio" name="q2" value="a"> a) To manage databases</label>
+                <label><input type="radio" name="q2" value="b"> b) To create user interfaces</label>
+                <label><input type="radio" name="q2" value="c"> c) To handle incoming HTTP requests</label>
+                <label><input type="radio" name="q2" value="d"> d) To design website layouts</label>
+              </li>
+              <li>
+                <h3>Which of the following is used to apply styles to HTML elements?</h3>
+                <label><input type="radio" name="q3" value="a"> a) JavaScript</label>
+                <label><input type="radio" name="q3" value="b"> b) CSS</label>
+                <label><input type="radio" name="q3" value="c"> c) Python</label>
+                <label><input type="radio" name="q3" value="d"> d) HTML</label>
+              </li>
+              <li>
+                <h3>What is the purpose of "routing" in a web application?</h3>
+                <label><input type="radio" name="q4" value="a"> a) Handling server-side logic</label>
+                <label><input type="radio" name="q4" value="b"> b) Designing user interfaces</label>
+                <label><input type="radio" name="q4" value="c"> c) Navigating between different views or pages</label>
+                <label><input type="radio" name="q4" value="d"> d) Creating API endpoints</label>
+              </li>
+              <li>
+                <h3>What does "API" stand for in the context of web development?</h3>
+                <label><input type="radio" name="q5" value="a"> a) Application Protocol Interface</label>
+                <label><input type="radio" name="q5" value="b"> b) Advanced Programming Interface</label>
+                <label><input type="radio" name="q5" value="c"> c) Application Programming Interface</label>
+                <label><input type="radio" name="q5" value="d"> d) Advanced Protocol Interface</label>
+              </li>
+              <li>
+                <h3>Which programming language is commonly used for building interactive user interfaces?</h3>
+                <label><input type="radio" name="q6" value="a"> a) Python</label>
+                <label><input type="radio" name="q6" value="b"> b) JavaScript</label>
+                <label><input type="radio" name="q6" value="c"> c) Java</label>
+                <label><input type="radio" name="q6" value="d"> d) C++</label>
+              </li>
+              <li>
+                <h3>What does "MVC" stand for in the context of software architecture?</h3>
+                <label><input type="radio" name="q7" value="a"> a) Model-View-Controller</label>
+                <label><input type="radio" name="q7" value="b"> b) Mobile-View-Collaboration</label>
+                <label><input type="radio" name="q7" value="c"> c) Model-View-Collaboration</label>
+                <label><input type="radio" name="q7" value="d"> d) Mobile-View-Controller</label>
+              </li>
+              <li>
+                <h3>Which of the following is NOT a valid way to include external JavaScript in an HTML document?</h3>
+                <label><input type="radio" name="q8" value="a"> a) &lt;script src="script.js"&gt;&lt;/script&gt;</label>
+                <label><input type="radio" name="q8" value="b"> b) &lt;javascript src="script.js"&gt;&lt;/javascript&gt;</label>
+                <label><input type="radio" name="q8" value="c"> c) &lt;link rel="script" href="script.js"&gt;</label>
+                <label><input type="radio" name="q8" value="d"> d) &lt;a href="script.js"&gt;&lt;/a&gt;</label>
+              </li>
+              <li>
+                <h3>What does "ORM" stand for in backend development?</h3>
+                <label><input type="radio" name="q9" value="a"> a) Object-Relational Mapping</label>
+                <label><input type="radio" name="q9" value="b"> b) Object-Resource Model</label>
+                <label><input type="radio" name="q9" value="c"> c) Object-Request Model</label>
+                <label><input type="radio" name="q9" value="d"> d) Object-Rendering Mechanism</label>
+              </li>
+              <li>
+                <h3>Which of the following databases is known as a NoSQL database?</h3>
+                <label><input type="radio" name="q10" value="a"> a) MySQL</label>
+                <label><input type="radio" name="q10" value="b"> b) PostgreSQL</label>
+                <label><input type="radio" name="q10" value="c"> c) MongoDB</label>
+                <label><input type="radio" name="q10" value="d"> d) SQLite</label>
+              </li>
+              <li>
+                <h3>What is the purpose of "caching" in web development?</h3>
+                <label><input type="radio" name="q11" value="a"> a) To prevent unauthorized access</label>
+                <label><input type="radio" name="q11" value="b"> b) To improve performance by storing and reusing data</label>
+                <label><input type="radio" name="q11" value="c"> c) To secure database connections</label>
+                <label><input type="radio" name="q11" value="d"> d) To generate dynamic content</label>
+              </li>
+              <li>
+                <h3>Which of the following is used for handling asynchronous operations in JavaScript on the backend?</h3>
+                <label><input type="radio" name="q12" value="a"> a) Promises</label>
+                <label><input type="radio" name="q12" value="b"> b) Observables</label>
+                <label><input type="radio" name="q12" value="c"> c) Callbacks</label>
+                <label><input type="radio" name="q12" value="d"> d) Async/Await</label>
+              </li>
+              <li>
+                <h3>What is the purpose of a "session" in web development?</h3>
+                <label><input type="radio" name="q13" value="a"> a) To store data on the client-side</label>
+                <label><input type="radio" name="q13" value="b"> b) To manage database connections</label>
+                <label><input type="radio" name="q13" value="c"> c) To store data temporarily on the server-side</label>
+                <label><input type="radio" name="q13" value="d"> d) To authenticate users</label>
+              </li>
+              <li>
+                <h3>Which of the following is used for creating and managing RESTful APIs?</h3>
+                <label><input type="radio" name="q14" value="a"> a) SOAP</label>
+                <label><input type="radio" name="q14" value="b"> b) GraphQL</label>
+                <label><input type="radio" name="q14" value="c"> c) AJAX</label>
+                <label><input type="radio" name="q14" value="d"> d) Express.js</label>
+              </li>
+              <li>
+                <h3>What is the purpose of "middleware" in web development?</h3>
+                <label><input type="radio" name="q15" value="a"> a) To store user data</label>
+                <label><input type="radio" name="q15" value="b"> b) To manage front-end frameworks</label>
+                <label><input type="radio" name="q15" value="c"> c) To handle intermediate processing of requests</label>
+                <label><input type="radio" name="q15" value="d"> d) To create database schemas</label>
+              </li>
+            </ol>
+            <input type="submit" value="Submit">
+            <div id="scoreBoard"></div>
+            <div id="answers" style="display: none;"></div>
+          </form>
+        </div>
+          </body>
+            <script>
+             document.addEventListener("DOMContentLoaded", function() {
+              const form = document.querySelector("form");
+          
+              form.addEventListener("submit", function(event) {
+                event.preventDefault();
+          
+                  const answers = {
+                    q1: "a",
+                    q2: "c",
+                    q3: "b",
+                    q4: "c",
+                    q5: "c",
+                    q6: "b",
+                    q7: "a",
+                    q8: "b",
+                    q9: "a",
+                    q10: "c",
+                    q11: "b",
+                    q12: "d",
+                    q13: "c",
+                    q14: "d",
+                    q15: "c",
+                  };
+            
+                  let score = 0;
+                let answerHTML = "<h2>Results:</h2>";
+          
+                for (const question in answers) {
+                  const selectedOption = document.querySelector(`input[name=${question}]:checked`);
+                  if (selectedOption) {
+                    const selectedValue = selectedOption.value;
+                    if (selectedValue === answers[question]) {
+                      score++;
+                      answerHTML += `<p>Question ${question.substring(1)}: Your answer <strong>${selectedValue}</strong> is <strong>Correct</strong></p>`;
+                    } else {
+                      answerHTML += `<p>Question ${question.substring(1)}: Your answer <strong>${selectedValue}</strong> is <strong>Incorrect</strong> - Correct answer: ${answers[question]}</p>`;
+                    }
+                  } else {
+                    answerHTML += `<p>Question ${question.substring(1)}: <strong>No answer</strong> - Correct answer: ${answers[question]}</p>`;
+                  }
+                }
+          
+                const totalQuestions = Object.keys(answers).length;
+                const userScore = (score / totalQuestions) * 100;
+          
+                
+                const scoreHTML = `<h2>Your Score: ${userScore.toFixed(2)}%</h2>`;
+          
+                
+                const scoreBoardDiv = document.getElementById("scoreBoard");
+                scoreBoardDiv.innerHTML = scoreHTML + answerHTML;
+                scoreBoardDiv.style.display = "block";
+          
+              
+                window.scrollTo(0, scoreBoardDiv.offsetTop);
+          
+                
+                });
+              });
+            </script> 
+    </html>
+    <footer>
+        <p>&copy; 2023 Career Development Evaluation. All rights reserved.</p>
+    </footer>
+</body>
+</html>

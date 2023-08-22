@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        header {
+    position: relative;
+    background-color: #007bff;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+    overflow: hidden;
+}
+#n {
+    text-align: right;
+}
+header .header-content {
+    opacity: 0;
+    transform: translateY(-40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+header.animated .header-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Geometric pattern background */
+header {
+    background: linear-gradient(135deg, #dca9ec 0%, #9c0fe3 100%);
+}
+
+/* Unique design elements */
+.header-title {
+    font-size: 3.5em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 0.5em;
+}
+
+.header-subtitle {
+    font-size: 1.2em;
+    opacity: 0.8;
+    margin-bottom: 1em;
+}
+
+/* Icon styling */
+.header-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-icons i {
+    font-size: 2em;
+    margin: 0 1em;
+    transition: transform 0.3s ease-in-out;
+}
+
+.header-icons i:hover {
+    transform: translateY(-5px);
+}
+
+img{
+    display: flex;
+    align-items: flex-end;
+}
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+.hero {
+    background-image: url(skasc.jpg);
+    background-size: cover;
+    color: #fff;
+    padding: 10em 0;
+    text-align: center;
+}
+        /* Reset default margin and padding */
+        body, h1, h2, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            background-image: url("cour.avif");
+        }
+
+        .roadmap {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .stage {
+            border-left: 4px solid #007bff;
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+
+        .sublist {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding-left: 15px;
+        }
+
+        li {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #dca9ec 0%, #9c0fe3 100%);
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+/* img 
+{
+    border-radius: 50%;
+    text-align: right
+} */
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    nav ul {
+        text-align: center;
+    }
+
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+    </style>
+    <title>Back-End Development Roadmap</title>
+</head>
+<body>
+    <img src="sklog.png" alt="logo" width="1470" height="150">
+    <header>
+    </div>
+        <nav>
+            <ul id="n">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="career-path.html">Career path</a></li>
+                <li><a href="acc.html">Account</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="roadmap">
+        <h1>Back-End Development Roadmap</h1>
+        <p style="font-size: 18px;">Backend refers to the part of a software application or system that is responsible for handling data processing, server-side logic, and database management.The average salary for Backend Developer is ₹8,00,000 per year in the India.
+             The average additional cash compensation for a Backend Developer in the India is ₹1,00,000, with a range from ₹46,500 - ₹1,50,000.</p>
+        <div style="background-color: #ebe58d; color: rgb(0, 0, 0); text-align: center; padding: 10px;">
+            <h3>Complete the stage 5 to unlock a expert guidance!</h3>
+        </div><br>
+
+        <div class="stage">
+            <h2>Stage 1: Introduction to Backend Development</h2>
+            <ul class="sublist">
+                <li>Understand the role of backend development</li>
+                <li>Learn about server-side programming languages</li>
+                <li>Set up a development environment</li>
+                <a href="beresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                <a href="backtest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+        <div class="stage">
+            <h2>Stage 2: Databases and Data Modeling</h2>
+            <ul class="sublist">
+                <li>Learn about relational and non-relational databases</li>
+                <li>Study database design and normalization</li>
+                <li>Practice SQL queries and database management</li>
+                 <a href="beresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                <a href="backtest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+    
+        <div class="stage">
+            <h2>Stage 3: Server-Side Programming</h2>
+            <ul class="sublist">
+                <li>Explore server-side scripting languages like Python, Node.js, etc.</li>
+                <li>Understand backend frameworks like Express, Django, Flask, etc.</li>
+                <li>Learn about routing, middleware, and API development</li>
+                 <a href="beresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                <a href="backtest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+        <div class="stage">
+            <h2>Stage 4: API Security and Authentication</h2>
+            <ul class="sublist">
+                <li>Implement secure authentication and authorization mechanisms</li>
+                <li>Learn about OAuth 2.0, OpenID Connect, and token-based authentication</li>
+                <li>Practice securing APIs against common vulnerabilities (SQL injection, XSS, CSRF, etc.)</li>
+                 <a href="beresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                <a href="backtest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+    
+        <div class="stage">
+            <h2>Stage 5: Real-Time Applications and WebSockets</h2>
+            <ul class="sublist">
+                <li>Explore real-time communication using WebSockets</li>
+                <li>Learn about event-driven architectures and pub-sub patterns</li>
+                <li>Build real-time applications like chat applications, notifications, etc.</li>
+                 <a href="beresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                <a href="backtest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+        <div class="stage">
+            <h2>Stage 6: Authentication and Authorization</h2>
+            <ul class="sublist">
+                <li>Implement user authentication using techniques like JWT, OAuth</li>
+                <li>Understand role-based and permissions-based access control</li>
+                <li>Practice securing APIs and user data</li>
+                 <a href="beresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                <a href="backtest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+    
+        <div class="stage">
+            <h2>Stage 7: Caching and Performance Optimization</h2>
+            <ul class="sublist">
+                <li>Learn about caching strategies for improved performance</li>
+                <li>Explore tools like Redis for caching and in-memory data storage</li>
+                <li>Optimize database queries and server response time</li>
+                 <a href="beresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                <a href="backtest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+    
+        <div class="stage">
+            <h2>Stage 8: Web APIs and RESTful Services</h2>
+            <ul class="sublist">
+                <li>Study API design principles and REST architecture</li>
+                <li>Create and document RESTful APIs</li>
+                <li>Practice API testing and versioning</li>
+                 <a href="beresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                <a href="backtest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+    
+        <div class="stage">
+            <h2>Stage 9: Microservices and Containerization</h2>
+            <ul class="sublist">
+                <li>Explore microservices architecture and its benefits</li>
+                <li>Learn about containerization with Docker and orchestration with Kubernetes</li>
+                <li>Build and deploy microservices-based applications</li>
+                 <a href="beresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                <a href="backtest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+    
+        <div class="stage">
+            <h2>Stage 10: Serverless Architecture</h2>
+            <ul class="sublist">
+                <li>Understand serverless computing and its use cases</li>
+                <li>Explore serverless platforms like AWS Lambda, Azure Functions, etc.</li>
+                <li>Build and deploy serverless applications</li>
+                 <a href="beresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                <a href="backtest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+    
+        <div class="stage">
+            <h2>Stage 11: DevOps and Continuous Integration/Continuous Deployment (CI/CD)</h2>
+            <ul class="sublist">
+                <li>Learn about DevOps principles and culture</li>
+                <li>Implement CI/CD pipelines for automated testing and deployment</li>
+                <li>Practice version control, code review, and deployment strategies</li>
+                 <a href="beresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                <a href="backtest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+        <div class="stage">
+            <h2>Stage 12: Database Optimization</h2>
+            <ul class="sublist">
+                <li>Learn about indexing, query optimization, and database performance</li>
+                <li>Practice optimizing database queries for faster response times</li>
+                <li>Understand caching strategies for database results</li>
+                 <a href="beresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                <a href="backtest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+    
+        <div class="stage">
+            <h2>Stage 13: Real-Time Communication</h2>
+            <ul class="sublist">
+                <li>Explore technologies like WebSockets and Server-Sent Events</li>
+                <li>Build real-time features like chat applications and notifications</li>
+                <li>Understand event-driven architecture and pub/sub patterns</li>
+                 <a href="beresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                <a href="backtest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+    
+        <div class="stage">
+            <h2>Stage 14: Security and Authorization</h2>
+            <ul class="sublist">
+                <li>Learn about common security vulnerabilities and best practices</li>
+                <li>Implement proper authorization and access control mechanisms</li>
+                <li>Practice securing APIs, sensitive data, and authentication methods</li>
+                 <a href="beresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                <a href="backtest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+    
+        <div class="stage">
+            <h2>Stage 15: Scalability and Load Balancing</h2>
+            <ul class="sublist">
+                <li>Study strategies for handling increased traffic and load</li>
+                <li>Learn about horizontal and vertical scaling</li>
+                <li>Explore load balancers and distributed systems</li>
+                 <a href="beresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                <a href="backtest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+    
+        <div class="stage">
+            <h2>Stage 16: Error Handling and Logging</h2>
+            <ul class="sublist">
+                <li>Implement robust error handling mechanisms</li>
+                <li>Learn about logging and monitoring tools</li>
+                <li>Practice debugging and identifying performance bottlenecks</li>
+                 <a href="beresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                <a href="backtest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+    
+        <div class="stage">
+            <h2>Stage 17: GraphQL and API Design</h2>
+            <ul class="sublist">
+                <li>Explore GraphQL for flexible and efficient data fetching</li>
+                <li>Learn about schema design and querying in GraphQL</li>
+                <li>Practice implementing GraphQL APIs alongside RESTful services</li>
+                 <a href="beresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                <a href="backtest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+    
+        <div class="stage">
+            <h2>Stage 18: Monitoring and Performance Tuning</h2>
+            <ul class="sublist">
+                <li>Implement monitoring tools for tracking application performance</li>
+                <li>Understand resource utilization and bottlenecks</li>
+                <li>Practice performance tuning and optimization techniques</li>
+                 <a href="beresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                 <a href="backtest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+    
+        <div class="stage">
+            <h2>Stage 19: Cloud Services and Deployment</h2>
+            <ul class="sublist">
+                <li>Explore cloud platforms like AWS, Azure, and Google Cloud</li>
+                <li>Learn about serverless deployment and managed services</li>
+                <li>Deploy and manage applications in cloud environments</li>
+                 <a href="beresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                <a href="backtest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+    
+        <div class="stage">
+            <h2>Stage 20: Keeping Up with Trends</h2>
+            <ul class="sublist">
+                <li>Stay updated with backend development trends and technologies</li>
+                <li>Participate in conferences, workshops, and online communities</li>
+                <li>Contribute to open-source projects and continue learning</li>
+                 <a href="beresource.html"><button type="button" class="btn btn-primary">Resource</button></a>
+                <a href="backtest.html"><button type="button" class="btn btn-primary">Take a test</button></a>
+            </ul>
+        </div>
+    </div>
+
+
+        </div>
+    <footer>
+        <p>&copy; 2023 Career Development Evaluation. All rights reserved.</p>
+    </footer>
+</body>
+</html>
